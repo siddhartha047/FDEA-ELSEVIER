@@ -1,0 +1,31 @@
+\begin{table*}[h]
+\centering
+\caption{Summary of HV performance of competing algorithms for eight WFG problems. Here B, E AND W indicate the number of times  $F$-DEA was found better, equal and worse compared to a particular algorithm.}
+	\label{table:wfgsummary}
+
+%\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{adjustbox}{width=0.50\textwidth,center}
+%\resizebox{\textwidth}{!}{
+
+\begin{tabular}{c|cccccc}
+\thickhline
+WFG & \multicolumn{6}{c}{HV Performance on 2-  and 3- objective} \\\thickhline
+F-DEA vs & HypE & MOEA/D & FD-NSGAII & SDE & NSGAIII & PICEA-g \\\thickhline
+B & 16 & 15 & 16 & 2 & 8 & 5 \\
+E & 0 & 1 & 0 & 1 & 3 & 4 \\
+W & 0 & 0 & 0 & 13 & 5 & 7 \\\thickhline
+ & \multicolumn{6}{c}{HV Performance on 5- and 7- objective} \\\thickhline
+%F-DEA vs & HypE & MOEA/D & FD-NSGAII & SDE & NSGAIII & PICEA-g \\\thickhline
+B & 16 & 16 & 15 & 4 & 15 & 4 \\
+E & 0 & 0 & 0 & 5 & 0 & 3 \\
+W & 0 & 0 & 1 & 7 & 1 & 9 \\\thickhline
+ & \multicolumn{6}{c}{HV Performance on 10-, 12-, 15-, 20- and 25-objective} \\\thickhline
+%F-DEA vs & HypE & MOEA/D & FD-NSGAII & SDE & NSGAIII & PICEA-g \\\thickhline
+B & 40 & 40 & 35 & 29 & 40 & 31 \\
+E & 0 & 0 & 2 & 4 & 0 & 3 \\
+W & 0 & 0 & 3 & 7 & 0 & 6 \\\thickhline
+\end{tabular}
+%}
+\end{adjustbox}
+\end{table*}

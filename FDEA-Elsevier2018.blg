@@ -1,0 +1,36 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: FDEA-Elsevier2018.aux
+The style file: elsarticle-num.bst
+Database file #1: fdeabibliography.bib
+You're missing a field name---line 413 of file fdeabibliography.bib
+ : 
+ : % title={Multi-objective optimisation based on relation favour},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 423 of file fdeabibliography.bib
+ : 
+ : % title={Robust multi-objective optimization in high dimensional spaces},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 709 of file fdeabibliography.bib
+ : 
+ : % title={Multi-objective optimization using evolutionary algorithms},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 762 of file fdeabibliography.bib
+ : %@inproceedings{wagner2007pareto
+ :                                 ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 900 of file fdeabibliography.bib
+ : 
+ : % isbn = {0-201-89684-2},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 995 of file fdeabibliography.bib
+ : @article{mendel1995fuzzy
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--empty publisher in Knuth:1997:ACP:270146
+Warning--can't use both author and editor fields in deb2005scalable
+Warning--empty publisher in deb2005scalable
+Warning--empty chapter and pages in deb2005scalable
+(There were 6 error messages)

@@ -1,0 +1,1736 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.9)  11 FEB 2018 02:51
+entering extended mode
+**FDEA-Elsevier2018.tex
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\FDEA-Elsevier2018.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\elsarticle\elsarticle.cls"
+Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
+\@bls=\dimen102
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\c@tnote=\count88
+\c@fnote=\count89
+\c@cnote=\count90
+\c@ead=\count91
+\c@author=\count92
+\@eadauthor=\toks15
+\c@affn=\count93
+\absbox=\box26
+\keybox=\box27
+\Columnwidth=\dimen106
+\space@left=\dimen107
+\els@boxa=\box28
+\els@boxb=\box29
+\leftMargin=\dimen108
+\@enLab=\toks16
+\@sep=\skip43
+\@@sep=\skip44
+
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\FDEA-Elsevier2018.spl)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+\splwrite=\write3
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen109
+\Hy@linkcounter=\count95
+\Hy@pagecounter=\count96
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count97
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count98
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen110
+\Fld@menulength=\count99
+\Field@Width=\dimen111
+\Fld@charsize=\dimen112
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count100
+\c@Item=\count101
+\c@Hfootnote=\count102
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count103
+\c@bookmark@seq@number=\count104
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip47
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lineno\lineno.sty"
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count105
+\output=\toks17
+\linenoprevgraf=\count106
+\linenumbersep=\dimen113
+\linenumberwidth=\dimen114
+\c@linenumber=\count107
+\c@pagewiselinenumber=\count108
+\c@LN@truepage=\count109
+\c@internallinenumber=\count110
+\c@internallinenumbers=\count111
+\quotelinenumbersep=\dimen115
+\bframerule=\dimen116
+\bframesep=\dimen117
+\bframebox=\box30
+LaTeX Info: Redefining \\ on input line 3056.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen118
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen119
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count112
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count113
+\leftroot@=\count114
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count115
+\DOTSCASE@=\count116
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box31
+\strutbox@=\box32
+\big@size=\dimen120
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count117
+\c@MaxMatrixCols=\count118
+\dotsspace@=\muskip11
+\c@parentequation=\count119
+\dspbrk@lvl=\count120
+\tag@help=\toks19
+\row@=\count121
+\column@=\count122
+\maxfields@=\count123
+\andhelp@=\toks20
+\eqnshift@=\dimen121
+\alignsep@=\dimen122
+\tagshift@=\dimen123
+\tagwidth@=\dimen124
+\totwidth@=\dimen125
+\lineht@=\dimen126
+\@envbody=\toks21
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count124
+\float@exts=\toks23
+\float@box=\box33
+\@float@everytoks=\toks24
+\@floatcapt=\box34
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks25
+\c@algorithm=\count125
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count126
+\c@ALC@line=\count127
+\c@ALC@rem=\count128
+\c@ALC@depth=\count129
+\ALC@tlm=\skip51
+\algorithmicindent=\skip52
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count130
+\LTcapwidth=\dimen127
+\LT@head=\box35
+\LT@firsthead=\box36
+\LT@foot=\box37
+\LT@lastfoot=\box38
+\LT@cols=\count131
+\LT@rows=\count132
+\c@LT@tables=\count133
+\c@LT@chunks=\count134
+\LT@p@ftn=\toks26
+)
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\mathchars.sty)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen128
+\epsfysize=\dimen129
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip57
+\subfigcapskip=\skip58
+\subfigcaptopadj=\dimen130
+\subfigbottomskip=\skip59
+\subfigcapmargin=\dimen131
+\subfiglabelskip=\skip60
+\c@subfigure=\count135
+\c@lofdepth=\count136
+\c@subtable=\count137
+\c@lotdepth=\count138
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip61
+\subfig@bottom=\skip62
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
+x"
+\pgfutil@everybye=\toks27
+\pgfutil@tempdima=\dimen132
+\pgfutil@tempdimb=\dimen133
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
+sts.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
+"
+\pgfutil@abb=\box39
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+"
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+"
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
+ode.tex"
+\pgfkeys@tmptoks=\toks30
+))
+\pgf@x=\dimen134
+\pgf@y=\dimen135
+\pgf@xa=\dimen136
+\pgf@ya=\dimen137
+\pgf@xb=\dimen138
+\pgf@yb=\dimen139
+\pgf@xc=\dimen140
+\pgf@yc=\dimen141
+\w@pgf@writea=\write4
+\r@pgf@reada=\read1
+\c@pgf@counta=\count139
+\c@pgf@countb=\count140
+\c@pgf@countc=\count141
+\c@pgf@countd=\count142
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
+ef"
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-p
+df.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
+code.tex"
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count143
+\pgfsyssoftpath@bigbuffer@items=\count144
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
+code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+"
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
+"
+\pgfmath@dimen=\dimen142
+\pgfmath@count=\count145
+\pgfmath@box=\box40
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
+tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
+nometric.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
+m.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
+rison.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
+erarithmetics.code.tex")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count146
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
+de.tex"
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen143
+\pgf@picmaxx=\dimen144
+\pgf@picminy=\dimen145
+\pgf@picmaxy=\dimen146
+\pgf@pathminx=\dimen147
+\pgf@pathmaxx=\dimen148
+\pgf@pathminy=\dimen149
+\pgf@pathmaxy=\dimen150
+\pgf@xx=\dimen151
+\pgf@xy=\dimen152
+\pgf@yx=\dimen153
+\pgf@yy=\dimen154
+\pgf@zx=\dimen155
+\pgf@zy=\dimen156
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
+ruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen157
+\pgf@path@lasty=\dimen158
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
+.code.tex"
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen159
+\pgf@shorten@start@additional=\dimen160
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
+de.tex"
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box41
+\pgf@hbox=\box42
+\pgf@layerbox@main=\box43
+\pgf@picture@serial@count=\count147
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
+ate.code.tex"
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen161
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
+ations.code.tex"
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen162
+\pgf@pt@y=\dimen163
+\pgf@pt@temp=\dimen164
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
+e.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.c
+ode.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathproce
+ssing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
+de.tex"
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen165
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
+e.tex"
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen166
+\pgf@sys@shading@range@num=\count148
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
+e.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
+code.tex"
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box44
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
+de.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretranspare
+ncy.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.
+code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
+e.tex"
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box45
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
+tex"
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-0-65.sty"
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen167
+\pgf@nodesepend=\dimen168
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
+\pgffor@iter=\dimen169
+\pgffor@skip=\dimen170
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
+e.tex"
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
+dlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count149
+\pgfplotmarksize=\dimen171
+)
+\tikz@lastx=\dimen172
+\tikz@lasty=\dimen173
+\tikz@lastxsaved=\dimen174
+\tikz@lastysaved=\dimen175
+\tikzleveldistance=\dimen176
+\tikzsiblingdistance=\dimen177
+\tikz@figbox=\box46
+\tikz@figbox@bg=\box47
+\tikz@tempbox=\box48
+\tikz@tempbox@bg=\box49
+\tikztreelevel=\count150
+\tikznumberofchildren=\count151
+\tikznumberofcurrentchild=\count152
+\tikz@fig@count=\count153
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
+e.tex"
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count154
+\pgfmatrixcurrentcolumn=\count155
+\pgf@matrix@numberofcolumns=\count156
+)
+\tikz@expandcount=\count157
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.code.tex"
+File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.misc.code.tex"
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.misc.code.tex"
+File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.5)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.symbols.code.tex"
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.symbols.code.tex"
+File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.0 (rcs-revision 1.6)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.arrows.code.tex"
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.arrows.code.tex"
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.callouts.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.callouts.code.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryshapes.multipart.code.tex"
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
+shapes.multipart.code.tex"
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.0 (rcs-revision 1.2)
+\pgfnodepartlowerbox=\box50
+\pgfnodeparttwobox=\box51
+\pgfnodepartthreebox=\box52
+\pgfnodepartfourbox=\box53
+\pgfnodeparttwentybox=\box54
+\pgfnodepartnineteenbox=\box55
+\pgfnodeparteighteenbox=\box56
+\pgfnodepartseventeenbox=\box57
+\pgfnodepartsixteenbox=\box58
+\pgfnodepartfifteenbox=\box59
+\pgfnodepartfourteenbox=\box60
+\pgfnodepartthirteenbox=\box61
+\pgfnodeparttwelvebox=\box62
+\pgfnodepartelevenbox=\box63
+\pgfnodeparttenbox=\box64
+\pgfnodepartninebox=\box65
+\pgfnodeparteightbox=\box66
+\pgfnodepartsevenbox=\box67
+\pgfnodepartsixbox=\box68
+\pgfnodepartfivebox=\box69
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibraryarrows.code.tex"
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.
+code.tex"
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen178
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen179
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen180
+\lightrulewidth=\dimen181
+\cmidrulewidth=\dimen182
+\belowrulesep=\dimen183
+\belowbottomsep=\dimen184
+\aboverulesep=\dimen185
+\abovetopsep=\dimen186
+\cmidrulesep=\dimen187
+\cmidrulekern=\dimen188
+\defaultaddspace=\dimen189
+\@cmidla=\count158
+\@cmidlb=\count159
+\@aboverulesep=\dimen190
+\@belowrulesep=\dimen191
+\@thisruleclass=\count160
+\@lastruleclass=\count161
+\@thisrulewidth=\dimen192
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
+\UL@box=\box70
+\UL@hyphenbox=\box71
+\UL@skip=\skip63
+\UL@hook=\toks39
+\UL@height=\dimen193
+\UL@pe=\count162
+\UL@pixel=\dimen194
+\ULC@box=\box72
+Package: ulem 2012/05/18
+\ULdepth=\dimen195
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks40
+\footnotemargin=\dimen196
+\c@pp@next@reset=\count163
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks41
+\verbatim@line=\toks42
+\verbatim@in@stream=\read2
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen197
+\extrarowheight=\dimen198
+\NC@list=\toks43
+\extratabsurround=\skip64
+\backup@length=\skip65
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks44
+\XKV@tempa@toks=\toks45
+\XKV@depth=\count164
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box73
+)
+\tc@llx=\dimen199
+\tc@lly=\dimen200
+\tc@urx=\dimen201
+\tc@ury=\dimen202
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen203
+\adjbox@Height=\dimen204
+\adjbox@Depth=\dimen205
+\adjbox@Totalheight=\dimen206
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count165
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box74
+\sift@deathcycles=\count166
+\@vwid@loff=\dimen207
+\@vwid@roff=\dimen208
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen209
+\captionmargin@=\dimen210
+\captionwidth=\dimen211
+\caption@tempdima=\dimen212
+\caption@indent=\dimen213
+\caption@parindent=\dimen214
+\caption@hangindent=\dimen215
+)
+\c@ContinuedFloat=\count167
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
+Package caption Info: subfigure package is loaded.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count168
+\Gm@cntv=\count169
+\c@Gm@tempcnt=\count170
+\Gm@bindingoffset=\dimen216
+\Gm@wd@mp=\dimen217
+\Gm@odd@mp=\dimen218
+\Gm@even@mp=\dimen219
+\Gm@layoutwidth=\dimen220
+\Gm@layoutheight=\dimen221
+\Gm@layouthoffset=\dimen222
+\Gm@layoutvoffset=\dimen223
+\Gm@dimlist=\toks46
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+\@input{preamble.aux}
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\preamble.tex
+\c@definition=\count171
+\c@theorem=\count172
+)
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\FDEA-Elsevier2018.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count173
+\scratchdimen=\dimen224
+\scratchbox=\box75
+\nofMPsegments=\count174
+\nofMParguments=\count175
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count176
+\MPscratchDim=\dimen225
+\MPnumerator=\count177
+\makeMPintoPDFobject=\count178
+\everyMPtoPDFconversion=\toks48
+)
+\AtBeginShipoutBox=\box76
+Package hyperref Info: Link coloring OFF on input line 122.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count179
+)
+LaTeX Info: Redefining \ref on input line 122.
+LaTeX Info: Redefining \pageref on input line 122.
+LaTeX Info: Redefining \nameref on input line 122.
+
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\FDEA-Elsevier2018.out)
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\FDEA-Elsevier2018.out)
+\@outlinefile=\write5
+
+ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=652.70622pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=24.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 158.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 158.
+[1
+
+
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 218.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 218.
+ [2]
+Package epstopdf Info: Source file: <figures/relatedworks/Ngaussianfunctionwfg2
+_3.eps>
+(epstopdf)                    date: 2016-08-05 12:17:42
+(epstopdf)                    size: 230965 bytes
+(epstopdf)             Output file: <figures/relatedworks/Ngaussianfunctionwfg2
+_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:07:18
+(epstopdf)                    size: 20066 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/relatedworks/Ngauss
+ianfunctionwfg2_3-eps-converted-to.pdf figures/relatedworks/Ngaussianfunctionwf
+g2_3.eps>
+(epstopdf)             \includegraphics on input line 298.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/relatedworks/Ngaussianfunctionwfg2_3-eps-converted-to.pdf, id=220, 451
+.6875pt x 194.7275pt>
+File: figures/relatedworks/Ngaussianfunctionwfg2_3-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use figures/relatedworks/Ngaussianfunctionwfg2_3-eps-converted-to.pdf>
+Package pdftex.def Info: figures/relatedworks/Ngaussianfunctionwfg2_3-eps-conve
+rted-to.pdf used on input line 298.
+(pdftex.def)             Requested size: 238.49724pt x 108.40485pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 300.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 300.
+
+[3 <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/relatedworks/Ngaussianfuncti
+onwfg2_3-eps-converted-to.pdf>] [4]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 490.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5] [6] [7]
+Package epstopdf Info: Source file: <figures/proposedalgorithm/sAlg1.eps>
+(epstopdf)                    date: 2016-10-06 12:17:48
+(epstopdf)                    size: 15866 bytes
+(epstopdf)             Output file: <figures/proposedalgorithm/sAlg1-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:21:01
+(epstopdf)                    size: 6844 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/proposedalgorithm/s
+Alg1-eps-converted-to.pdf figures/proposedalgorithm/sAlg1.eps>
+(epstopdf)             \includegraphics on input line 799.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/proposedalgorithm/sAlg1-eps-converted-to.pdf, id=380, 301.125pt x 301.
+125pt>
+File: figures/proposedalgorithm/sAlg1-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/proposedalgorithm/sAlg1-eps-converted-to.pdf>
+Package pdftex.def Info: figures/proposedalgorithm/sAlg1-eps-converted-to.pdf u
+sed on input line 799.
+(pdftex.def)             Requested size: 108.405pt x 108.4049pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 799.
+Package epstopdf Info: Source file: <figures/proposedalgorithm/sAlg2.eps>
+(epstopdf)                    date: 2016-09-05 18:56:46
+(epstopdf)                    size: 13815 bytes
+(epstopdf)             Output file: <figures/proposedalgorithm/sAlg2-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:21:03
+(epstopdf)                    size: 6325 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/proposedalgorithm/s
+Alg2-eps-converted-to.pdf figures/proposedalgorithm/sAlg2.eps>
+(epstopdf)             \includegraphics on input line 805.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/proposedalgorithm/sAlg2-eps-converted-to.pdf, id=381, 301.125pt x 301.
+125pt>
+File: figures/proposedalgorithm/sAlg2-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/proposedalgorithm/sAlg2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/proposedalgorithm/sAlg2-eps-converted-to.pdf u
+sed on input line 805.
+(pdftex.def)             Requested size: 108.405pt x 108.4049pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 805--805
+[]\OT1/cmr/m/n/8 (b) Ac-tive ref-er-ence points
+ []
+
+Package epstopdf Info: Source file: <figures/proposedalgorithm/sAlg3.eps>
+(epstopdf)                    date: 2016-09-05 18:59:06
+(epstopdf)                    size: 11992 bytes
+(epstopdf)             Output file: <figures/proposedalgorithm/sAlg3-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:21:04
+(epstopdf)                    size: 4902 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/proposedalgorithm/s
+Alg3-eps-converted-to.pdf figures/proposedalgorithm/sAlg3.eps>
+(epstopdf)             \includegraphics on input line 811.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/proposedalgorithm/sAlg3-eps-converted-to.pdf, id=382, 301.125pt x 301.
+125pt>
+File: figures/proposedalgorithm/sAlg3-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/proposedalgorithm/sAlg3-eps-converted-to.pdf>
+Package pdftex.def Info: figures/proposedalgorithm/sAlg3-eps-converted-to.pdf u
+sed on input line 811.
+(pdftex.def)             Requested size: 108.405pt x 108.4049pt.
+ [8]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 841.
+
+Package epstopdf Info: Source file: <figures/proposedalgorithm/sAlg4.eps>
+(epstopdf)                    date: 2016-09-05 18:42:54
+(epstopdf)                    size: 14109 bytes
+(epstopdf)             Output file: <figures/proposedalgorithm/sAlg4-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:21:05
+(epstopdf)                    size: 4883 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/proposedalgorithm/s
+Alg4-eps-converted-to.pdf figures/proposedalgorithm/sAlg4.eps>
+(epstopdf)             \includegraphics on input line 848.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/proposedalgorithm/sAlg4-eps-converted-to.pdf, id=398, 301.125pt x 301.
+125pt>
+File: figures/proposedalgorithm/sAlg4-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/proposedalgorithm/sAlg4-eps-converted-to.pdf>
+Package pdftex.def Info: figures/proposedalgorithm/sAlg4-eps-converted-to.pdf u
+sed on input line 848.
+(pdftex.def)             Requested size: 101.17755pt x 101.1773pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 848--848
+[]\OT1/cmr/m/n/8 (a) Pre-ferred Ref-er-ence
+ []
+
+Package epstopdf Info: Source file: <figures/proposedalgorithm/sAlg6.eps>
+(epstopdf)                    date: 2016-09-05 19:05:13
+(epstopdf)                    size: 13048 bytes
+(epstopdf)             Output file: <figures/proposedalgorithm/sAlg6-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:21:07
+(epstopdf)                    size: 4479 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/proposedalgorithm/s
+Alg6-eps-converted-to.pdf figures/proposedalgorithm/sAlg6.eps>
+(epstopdf)             \includegraphics on input line 854.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/proposedalgorithm/sAlg6-eps-converted-to.pdf, id=399, 301.125pt x 301.
+125pt>
+File: figures/proposedalgorithm/sAlg6-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/proposedalgorithm/sAlg6-eps-converted-to.pdf>
+Package pdftex.def Info: figures/proposedalgorithm/sAlg6-eps-converted-to.pdf u
+sed on input line 854.
+(pdftex.def)             Requested size: 101.17755pt x 101.1773pt.
+Package epstopdf Info: Source file: <figures/proposedalgorithm/sAlg7.eps>
+(epstopdf)                    date: 2016-09-05 19:09:00
+(epstopdf)                    size: 12330 bytes
+(epstopdf)             Output file: <figures/proposedalgorithm/sAlg7-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:21:08
+(epstopdf)                    size: 4454 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/proposedalgorithm/s
+Alg7-eps-converted-to.pdf figures/proposedalgorithm/sAlg7.eps>
+(epstopdf)             \includegraphics on input line 860.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/proposedalgorithm/sAlg7-eps-converted-to.pdf, id=400, 301.125pt x 301.
+125pt>
+File: figures/proposedalgorithm/sAlg7-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/proposedalgorithm/sAlg7-eps-converted-to.pdf>
+Package pdftex.def Info: figures/proposedalgorithm/sAlg7-eps-converted-to.pdf u
+sed on input line 860.
+(pdftex.def)             Requested size: 101.17755pt x 101.1773pt.
+Package epstopdf Info: Source file: <figures/proposedalgorithm/sAlg5.eps>
+(epstopdf)                    date: 2016-09-05 18:24:21
+(epstopdf)                    size: 12078 bytes
+(epstopdf)             Output file: <figures/proposedalgorithm/sAlg5-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:21:09
+(epstopdf)                    size: 4020 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/proposedalgorithm/s
+Alg5-eps-converted-to.pdf figures/proposedalgorithm/sAlg5.eps>
+(epstopdf)             \includegraphics on input line 866.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/proposedalgorithm/sAlg5-eps-converted-to.pdf, id=401, 301.125pt x 301.
+125pt>
+File: figures/proposedalgorithm/sAlg5-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/proposedalgorithm/sAlg5-eps-converted-to.pdf>
+Package pdftex.def Info: figures/proposedalgorithm/sAlg5-eps-converted-to.pdf u
+sed on input line 866.
+(pdftex.def)             Requested size: 101.17755pt x 101.1773pt.
+ [9 <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/proposedalgorithm/sAlg1-eps
+-converted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/proposedalgo
+rithm/sAlg2-eps-converted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/figur
+es/proposedalgorithm/sAlg3-eps-converted-to.pdf> <D:/FDEA2016/Writing/Elsevier/
+FDEAclean/figures/proposedalgorithm/sAlg4-eps-converted-to.pdf> <D:/FDEA2016/Wr
+iting/Elsevier/FDEAclean/figures/proposedalgorithm/sAlg6-eps-converted-to.pdf> 
+<D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/proposedalgorithm/sAlg7-eps-con
+verted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/proposedalgorith
+m/sAlg5-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/proposedalgorithm/Nsigmoidfunction
+wfg2_3.eps>
+(epstopdf)                    date: 2016-08-05 12:11:51
+(epstopdf)                    size: 183606 bytes
+(epstopdf)             Output file: <figures/proposedalgorithm/Nsigmoidfunction
+wfg2_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:21:10
+(epstopdf)                    size: 16433 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/proposedalgorithm/N
+sigmoidfunctionwfg2_3-eps-converted-to.pdf figures/proposedalgorithm/Nsigmoidfu
+nctionwfg2_3.eps>
+(epstopdf)             \includegraphics on input line 933.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/proposedalgorithm/Nsigmoidfunctionwfg2_3-eps-converted-to.pdf, id=441,
+ 451.6875pt x 194.7275pt>
+File: figures/proposedalgorithm/Nsigmoidfunctionwfg2_3-eps-converted-to.pdf Gra
+phic file (type pdf)
+
+<use figures/proposedalgorithm/Nsigmoidfunctionwfg2_3-eps-converted-to.pdf>
+Package pdftex.def Info: figures/proposedalgorithm/Nsigmoidfunctionwfg2_3-eps-c
+onverted-to.pdf used on input line 933.
+(pdftex.def)             Requested size: 238.49724pt x 108.40485pt.
+
+[10 <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/proposedalgorithm/Nsigmoidf
+unctionwfg2_3-eps-converted-to.pdf>] [11] [12]
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/populationsettings.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+) [13] [14] (D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/hvwfg1.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+) (D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/wfgcount.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/WFG915D.tex
+Package epstopdf Info: Source file: <figures/experiments/wfg/our9_15temp.eps>
+(epstopdf)                    date: 2016-10-25 01:44:47
+(epstopdf)                    size: 73659 bytes
+(epstopdf)             Output file: <figures/experiments/wfg/our9_15temp-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:52:22
+(epstopdf)                    size: 21811 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/wfg/our
+9_15temp-eps-converted-to.pdf figures/experiments/wfg/our9_15temp.eps>
+(epstopdf)             \includegraphics on input line 13.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/wfg/our9_15temp-eps-converted-to.pdf, id=578, 376.40625pt 
+x 451.6875pt>
+File: figures/experiments/wfg/our9_15temp-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/experiments/wfg/our9_15temp-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/wfg/our9_15temp-eps-converted-to.p
+df used on input line 13.
+(pdftex.def)             Requested size: 82.6069pt x 99.12343pt.
+Package epstopdf Info: Source file: <figures/experiments/wfg/nsgaiiiwfg9_15.eps
+>
+(epstopdf)                    date: 2016-10-25 01:50:47
+(epstopdf)                    size: 66898 bytes
+(epstopdf)             Output file: <figures/experiments/wfg/nsgaiiiwfg9_15-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:52:24
+(epstopdf)                    size: 20029 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/wfg/nsg
+aiiiwfg9_15-eps-converted-to.pdf figures/experiments/wfg/nsgaiiiwfg9_15.eps>
+(epstopdf)             \includegraphics on input line 19.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/wfg/nsgaiiiwfg9_15-eps-converted-to.pdf, id=579, 376.40625
+pt x 451.6875pt>
+File: figures/experiments/wfg/nsgaiiiwfg9_15-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use figures/experiments/wfg/nsgaiiiwfg9_15-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/wfg/nsgaiiiwfg9_15-eps-converted-t
+o.pdf used on input line 19.
+(pdftex.def)             Requested size: 82.6069pt x 99.12343pt.
+Package epstopdf Info: Source file: <figures/experiments/wfg/zhenanwfg9_15.eps>
+
+(epstopdf)                    date: 2016-10-25 01:48:48
+(epstopdf)                    size: 66790 bytes
+(epstopdf)             Output file: <figures/experiments/wfg/zhenanwfg9_15-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:52:25
+(epstopdf)                    size: 8887 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/wfg/zhe
+nanwfg9_15-eps-converted-to.pdf figures/experiments/wfg/zhenanwfg9_15.eps>
+(epstopdf)             \includegraphics on input line 31.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/wfg/zhenanwfg9_15-eps-converted-to.pdf, id=580, 376.40625p
+t x 451.6875pt>
+File: figures/experiments/wfg/zhenanwfg9_15-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use figures/experiments/wfg/zhenanwfg9_15-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/wfg/zhenanwfg9_15-eps-converted-to
+.pdf used on input line 31.
+(pdftex.def)             Requested size: 82.6069pt x 99.12343pt.
+Package epstopdf Info: Source file: <figures/experiments/wfg/sdewfg9_15.eps>
+(epstopdf)                    date: 2016-10-25 01:58:51
+(epstopdf)                    size: 54326 bytes
+(epstopdf)             Output file: <figures/experiments/wfg/sdewfg9_15-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:52:26
+(epstopdf)                    size: 17533 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/wfg/sde
+wfg9_15-eps-converted-to.pdf figures/experiments/wfg/sdewfg9_15.eps>
+(epstopdf)             \includegraphics on input line 43.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/wfg/sdewfg9_15-eps-converted-to.pdf, id=581, 376.40625pt x
+ 451.6875pt>
+File: figures/experiments/wfg/sdewfg9_15-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use figures/experiments/wfg/sdewfg9_15-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/wfg/sdewfg9_15-eps-converted-to.pd
+f used on input line 43.
+(pdftex.def)             Requested size: 82.6069pt x 99.12343pt.
+Package epstopdf Info: Source file: <figures/experiments/wfg/piceagwfg9_15.eps>
+
+(epstopdf)                    date: 2016-10-25 01:57:12
+(epstopdf)                    size: 64114 bytes
+(epstopdf)             Output file: <figures/experiments/wfg/piceagwfg9_15-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 00:52:29
+(epstopdf)                    size: 16710 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/wfg/pic
+eagwfg9_15-eps-converted-to.pdf figures/experiments/wfg/piceagwfg9_15.eps>
+(epstopdf)             \includegraphics on input line 49.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/wfg/piceagwfg9_15-eps-converted-to.pdf, id=582, 376.40625p
+t x 451.6875pt>
+File: figures/experiments/wfg/piceagwfg9_15-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use figures/experiments/wfg/piceagwfg9_15-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/wfg/piceagwfg9_15-eps-converted-to
+.pdf used on input line 49.
+(pdftex.def)             Requested size: 82.6069pt x 99.12343pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [15] [16] [17 <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/experiments/wfg
+/our9_15temp-eps-converted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/figu
+res/experiments/wfg/nsgaiiiwfg9_15-eps-converted-to.pdf> <D:/FDEA2016/Writing/E
+lsevier/FDEAclean/figures/experiments/wfg/zhenanwfg9_15-eps-converted-to.pdf> <
+D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/experiments/wfg/sdewfg9_15-eps-c
+onverted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/experiments/wf
+g/piceagwfg9_15-eps-converted-to.pdf>]
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/dtlz7figures.tex
+Package epstopdf Info: Source file: <figures/experiments/dtlz/fdeadtlz7_10.eps>
+
+(epstopdf)                    date: 2016-10-25 01:14:42
+(epstopdf)                    size: 49144 bytes
+(epstopdf)             Output file: <figures/experiments/dtlz/fdeadtlz7_10-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 01:07:23
+(epstopdf)                    size: 12319 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/dtlz/fd
+eadtlz7_10-eps-converted-to.pdf figures/experiments/dtlz/fdeadtlz7_10.eps>
+(epstopdf)             \includegraphics on input line 8.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/dtlz/fdeadtlz7_10-eps-converted-to.pdf, id=629, 301.125pt 
+x 225.84375pt>
+File: figures/experiments/dtlz/fdeadtlz7_10-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use figures/experiments/dtlz/fdeadtlz7_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/dtlz/fdeadtlz7_10-eps-converted-to
+.pdf used on input line 8.
+(pdftex.def)             Requested size: 80.24443pt x 60.18257pt.
+Package epstopdf Info: Source file: <figures/experiments/dtlz/nsgaiiidtlz7_10.e
+ps>
+(epstopdf)                    date: 2016-10-25 01:17:30
+(epstopdf)                    size: 49221 bytes
+(epstopdf)             Output file: <figures/experiments/dtlz/nsgaiiidtlz7_10-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 01:07:24
+(epstopdf)                    size: 8080 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/dtlz/ns
+gaiiidtlz7_10-eps-converted-to.pdf figures/experiments/dtlz/nsgaiiidtlz7_10.eps
+>
+(epstopdf)             \includegraphics on input line 14.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/dtlz/nsgaiiidtlz7_10-eps-converted-to.pdf, id=630, 301.125
+pt x 225.84375pt>
+File: figures/experiments/dtlz/nsgaiiidtlz7_10-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use figures/experiments/dtlz/nsgaiiidtlz7_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/dtlz/nsgaiiidtlz7_10-eps-converted
+-to.pdf used on input line 14.
+(pdftex.def)             Requested size: 80.24443pt x 60.18257pt.
+Package epstopdf Info: Source file: <figures/experiments/dtlz/zhenandtlz7_10.ep
+s>
+(epstopdf)                    date: 2016-10-25 01:20:19
+(epstopdf)                    size: 45646 bytes
+(epstopdf)             Output file: <figures/experiments/dtlz/zhenandtlz7_10-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 01:07:25
+(epstopdf)                    size: 8387 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/dtlz/zh
+enandtlz7_10-eps-converted-to.pdf figures/experiments/dtlz/zhenandtlz7_10.eps>
+(epstopdf)             \includegraphics on input line 26.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/dtlz/zhenandtlz7_10-eps-converted-to.pdf, id=631, 301.125p
+t x 225.84375pt>
+File: figures/experiments/dtlz/zhenandtlz7_10-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use figures/experiments/dtlz/zhenandtlz7_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/dtlz/zhenandtlz7_10-eps-converted-
+to.pdf used on input line 26.
+(pdftex.def)             Requested size: 80.24443pt x 60.18257pt.
+Package epstopdf Info: Source file: <figures/experiments/dtlz/sdedtlz7_10.eps>
+(epstopdf)                    date: 2016-10-25 01:10:54
+(epstopdf)                    size: 50135 bytes
+(epstopdf)             Output file: <figures/experiments/dtlz/sdedtlz7_10-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2018-02-11 01:07:26
+(epstopdf)                    size: 12367 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/dtlz/sd
+edtlz7_10-eps-converted-to.pdf figures/experiments/dtlz/sdedtlz7_10.eps>
+(epstopdf)             \includegraphics on input line 38.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/dtlz/sdedtlz7_10-eps-converted-to.pdf, id=632, 301.125pt x
+ 225.84375pt>
+File: figures/experiments/dtlz/sdedtlz7_10-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use figures/experiments/dtlz/sdedtlz7_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/dtlz/sdedtlz7_10-eps-converted-to.
+pdf used on input line 38.
+(pdftex.def)             Requested size: 80.24443pt x 60.18257pt.
+Package epstopdf Info: Source file: <figures/experiments/dtlz/piceagdtlz7_10.ep
+s>
+(epstopdf)                    date: 2016-10-25 01:16:11
+(epstopdf)                    size: 48800 bytes
+(epstopdf)             Output file: <figures/experiments/dtlz/piceagdtlz7_10-ep
+s-converted-to.pdf>
+(epstopdf)                    date: 2018-02-11 01:07:27
+(epstopdf)                    size: 11580 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/dtlz/pi
+ceagdtlz7_10-eps-converted-to.pdf figures/experiments/dtlz/piceagdtlz7_10.eps>
+(epstopdf)             \includegraphics on input line 44.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/dtlz/piceagdtlz7_10-eps-converted-to.pdf, id=633, 301.125p
+t x 225.84375pt>
+File: figures/experiments/dtlz/piceagdtlz7_10-eps-converted-to.pdf Graphic file
+ (type pdf)
+
+<use figures/experiments/dtlz/piceagdtlz7_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/dtlz/piceagdtlz7_10-eps-converted-
+to.pdf used on input line 44.
+(pdftex.def)             Requested size: 80.24443pt x 60.18257pt.
+)
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/dtlzhv1.tex)
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/dtlzigd1.tex)
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/dtlzhvcount.tex)
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/dtlzigdcount.tex) [18 <D:/FD
+EA2016/Writing/Elsevier/FDEAclean/figures/experiments/dtlz/fdeadtlz7_10-eps-con
+verted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/experiments/dtlz
+/nsgaiiidtlz7_10-eps-converted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/
+figures/experiments/dtlz/zhenandtlz7_10-eps-converted-to.pdf> <D:/FDEA2016/Writ
+ing/Elsevier/FDEAclean/figures/experiments/dtlz/sdedtlz7_10-eps-converted-to.pd
+f> <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/experiments/dtlz/piceagdtlz7
+_10-eps-converted-to.pdf>] [19] [20]
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/dtlz1comparison.tex
+Package epstopdf Info: Source file: <figures/experiments/comparison/fdeawithout
+clusterdtlz1_10.eps>
+(epstopdf)                    date: 2016-10-25 00:42:16
+(epstopdf)                    size: 8410 bytes
+(epstopdf)             Output file: <figures/experiments/comparison/fdeawithout
+clusterdtlz1_10-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 00:46:01
+(epstopdf)                    size: 3287 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/compari
+son/fdeawithoutclusterdtlz1_10-eps-converted-to.pdf figures/experiments/compari
+son/fdeawithoutclusterdtlz1_10.eps>
+(epstopdf)             \includegraphics on input line 7.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/comparison/fdeawithoutclusterdtlz1_10-eps-converted-to.pdf
+, id=687, 301.125pt x 225.84375pt>
+File: figures/experiments/comparison/fdeawithoutclusterdtlz1_10-eps-converted-t
+o.pdf Graphic file (type pdf)
+
+<use figures/experiments/comparison/fdeawithoutclusterdtlz1_10-eps-converted-to
+.pdf>
+Package pdftex.def Info: figures/experiments/comparison/fdeawithoutclusterdtlz1
+_10-eps-converted-to.pdf used on input line 7.
+(pdftex.def)             Requested size: 94.4048pt x 70.80344pt.
+Package epstopdf Info: Source file: <figures/experiments/comparison/fdeaparetod
+tlz1_10.eps>
+(epstopdf)                    date: 2016-10-25 00:43:18
+(epstopdf)                    size: 29468 bytes
+(epstopdf)             Output file: <figures/experiments/comparison/fdeaparetod
+tlz1_10-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 00:46:02
+(epstopdf)                    size: 9330 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/compari
+son/fdeaparetodtlz1_10-eps-converted-to.pdf figures/experiments/comparison/fdea
+paretodtlz1_10.eps>
+(epstopdf)             \includegraphics on input line 13.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/comparison/fdeaparetodtlz1_10-eps-converted-to.pdf, id=688
+, 301.125pt x 225.84375pt>
+File: figures/experiments/comparison/fdeaparetodtlz1_10-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use figures/experiments/comparison/fdeaparetodtlz1_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/comparison/fdeaparetodtlz1_10-eps-
+converted-to.pdf used on input line 13.
+(pdftex.def)             Requested size: 94.4048pt x 70.80344pt.
+Package epstopdf Info: Source file: <figures/experiments/comparison/fdeagausdtl
+z1_10.eps>
+(epstopdf)                    date: 2016-10-25 00:37:42
+(epstopdf)                    size: 26478 bytes
+(epstopdf)             Output file: <figures/experiments/comparison/fdeagausdtl
+z1_10-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-10-25 00:46:02
+(epstopdf)                    size: 8286 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/experiments/compari
+son/fdeagausdtlz1_10-eps-converted-to.pdf figures/experiments/comparison/fdeaga
+usdtlz1_10.eps>
+(epstopdf)             \includegraphics on input line 19.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/experiments/comparison/fdeagausdtlz1_10-eps-converted-to.pdf, id=689, 
+301.125pt x 225.84375pt>
+File: figures/experiments/comparison/fdeagausdtlz1_10-eps-converted-to.pdf Grap
+hic file (type pdf)
+
+<use figures/experiments/comparison/fdeagausdtlz1_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/experiments/comparison/fdeagausdtlz1_10-eps-co
+nverted-to.pdf used on input line 19.
+(pdftex.def)             Requested size: 94.4048pt x 70.80344pt.
+)
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/dtlzIGDvariant.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+) [21 <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/experiments/comparison/fd
+eawithoutclusterdtlz1_10-eps-converted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FD
+EAclean/figures/experiments/comparison/fdeaparetodtlz1_10-eps-converted-to.pdf>
+ <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/experiments/comparison/fdeagau
+sdtlz1_10-eps-converted-to.pdf>]
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\latexinput/parameterSensitivityDtlz.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+Package epstopdf Info: Source file: <figures/parameter/paramdtlzGD2_10.eps>
+(epstopdf)                    date: 2016-09-10 17:18:06
+(epstopdf)                    size: 20059 bytes
+(epstopdf)             Output file: <figures/parameter/paramdtlzGD2_10-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2016-09-10 17:20:50
+(epstopdf)                    size: 8000 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/parameter/paramdtlz
+GD2_10-eps-converted-to.pdf figures/parameter/paramdtlzGD2_10.eps>
+(epstopdf)             \includegraphics on input line 8.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/parameter/paramdtlzGD2_10-eps-converted-to.pdf, id=720, 451.6875pt x 2
+63.98625pt>
+File: figures/parameter/paramdtlzGD2_10-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use figures/parameter/paramdtlzGD2_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/parameter/paramdtlzGD2_10-eps-converted-to.pdf
+ used on input line 8.
+(pdftex.def)             Requested size: 180.67499pt x 105.59665pt.
+Package epstopdf Info: Source file: <figures/parameter/paramdtlzIGD2_10.eps>
+(epstopdf)                    date: 2016-09-10 17:14:41
+(epstopdf)                    size: 19809 bytes
+(epstopdf)             Output file: <figures/parameter/paramdtlzIGD2_10-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2016-09-10 17:20:50
+(epstopdf)                    size: 7838 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/parameter/paramdtlz
+IGD2_10-eps-converted-to.pdf figures/parameter/paramdtlzIGD2_10.eps>
+(epstopdf)             \includegraphics on input line 14.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/parameter/paramdtlzIGD2_10-eps-converted-to.pdf, id=721, 451.6875pt x 
+263.98625pt>
+File: figures/parameter/paramdtlzIGD2_10-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use figures/parameter/paramdtlzIGD2_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/parameter/paramdtlzIGD2_10-eps-converted-to.pd
+f used on input line 14.
+(pdftex.def)             Requested size: 180.67499pt x 105.59665pt.
+Package epstopdf Info: Source file: <figures/parameter/paramdtlzHV2_10.eps>
+(epstopdf)                    date: 2016-09-10 17:15:59
+(epstopdf)                    size: 20139 bytes
+(epstopdf)             Output file: <figures/parameter/paramdtlzHV2_10-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2016-09-10 17:20:49
+(epstopdf)                    size: 8014 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/parameter/paramdtlz
+HV2_10-eps-converted-to.pdf figures/parameter/paramdtlzHV2_10.eps>
+(epstopdf)             \includegraphics on input line 20.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/parameter/paramdtlzHV2_10-eps-converted-to.pdf, id=722, 451.6875pt x 2
+63.98625pt>
+File: figures/parameter/paramdtlzHV2_10-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use figures/parameter/paramdtlzHV2_10-eps-converted-to.pdf>
+Package pdftex.def Info: figures/parameter/paramdtlzHV2_10-eps-converted-to.pdf
+ used on input line 20.
+(pdftex.def)             Requested size: 180.67499pt x 105.59665pt.
+)
+[22 <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/parameter/paramdtlzGD2_10-e
+ps-converted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/figures/parameter/
+paramdtlzIGD2_10-eps-converted-to.pdf> <D:/FDEA2016/Writing/Elsevier/FDEAclean/
+figures/parameter/paramdtlzHV2_10-eps-converted-to.pdf>]
+(D:\FDEA2016\Writing\Elsevier\FDEAclean\FDEA-Elsevier2018.bbl [23] [24])
+[25]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1534.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1534.
+ (D:\FDEA2016\Writing\Elsevier\FDEAclean\FDEA-Elsevier2018.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1534.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1534.
+
+Package rerunfilecheck Info: File `FDEA-Elsevier2018.out' has not changed.
+(rerunfilecheck)             Checksum: 256B3E70DA84CDC89F8EACEC784621CB;2595.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1534.
+ ) 
+Here is how much of TeX's memory you used:
+ 22424 strings out of 493921
+ 437583 string characters out of 3144874
+ 610277 words of memory out of 3000000
+ 25009 multiletter control sequences out of 15000+200000
+ 10324 words of font info for 36 fonts, out of 3000000 for 9000
+ 844 hyphenation exceptions out of 8191
+ 55i,17n,92p,1347b,792s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx5.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
+0.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.p
+fb>
+Output written on FDEA-Elsevier2018.pdf (25 pages, 702164 bytes).
+PDF statistics:
+ 887 PDF objects out of 1000 (max. 8388607)
+ 209 named destinations out of 1000 (max. 500000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
+

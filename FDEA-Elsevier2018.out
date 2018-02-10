@@ -1,0 +1,36 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Preliminaries and Related Work}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Preliminaries}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Related Work}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Proposed Algorithm}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Reference Point Generation}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Preferred Reference Point}{section.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Active Reference Point}{subsection.3.2}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.2}{MinMax Measure}{subsection.3.2}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Clustering}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.4}{Adaptive Membership Function}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.5}{Fuzzy Dominance and Fitness Assignment}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.6}{Environmental Selection}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.7}{Computational Complexity}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{Experimental Studies}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Benchmark Problems}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.2}{Performance metrics}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.3}{ Other Algorithms in Comparison}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.4}{Parameter Setting}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.5}{Experiment on WFG Problems}{section.4}% 20
+\BOOKMARK [3][-]{subsubsection.4.5.1}{WFG1 Problem}{subsection.4.5}% 21
+\BOOKMARK [3][-]{subsubsection.4.5.2}{WFG2 Problem}{subsection.4.5}% 22
+\BOOKMARK [3][-]{subsubsection.4.5.3}{WFG4 Problem}{subsection.4.5}% 23
+\BOOKMARK [3][-]{subsubsection.4.5.4}{WFG5 Problem}{subsection.4.5}% 24
+\BOOKMARK [3][-]{subsubsection.4.5.5}{WFG6 Problem}{subsection.4.5}% 25
+\BOOKMARK [3][-]{subsubsection.4.5.6}{WFG7 Problem}{subsection.4.5}% 26
+\BOOKMARK [3][-]{subsubsection.4.5.7}{WFG8 Problem}{subsection.4.5}% 27
+\BOOKMARK [3][-]{subsubsection.4.5.8}{WFG9 Problem}{subsection.4.5}% 28
+\BOOKMARK [2][-]{subsection.4.6}{Experiments on DTLZ Problems}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.6.1}{DTLZ1 Problem}{subsection.4.6}% 30
+\BOOKMARK [3][-]{subsubsection.4.6.2}{DTLZ3 Problem}{subsection.4.6}% 31
+\BOOKMARK [3][-]{subsubsection.4.6.3}{DTLZ7 Problem}{subsection.4.6}% 32
+\BOOKMARK [2][-]{subsection.4.7}{Discussion}{section.4}% 33
+\BOOKMARK [2][-]{subsection.4.8}{Effect of Reference Point Based Clustering and Fuzzy Dominance}{section.4}% 34
+\BOOKMARK [2][-]{subsection.4.9}{Parameter Sensitivity}{section.4}% 35
+\BOOKMARK [1][-]{section.5}{Conclusion and Future Work}{}% 36

@@ -1,0 +1,1534 @@
+\documentclass[review]{elsarticle}
+\usepackage{hyperref}
+\usepackage{lineno}
+%\modulolinenumbers[5]
+%\documentclass[journal]{IEEEtran}
+%\documentclass[twoside]{article}
+%\usepackage{ecj,palatino,latexsym,natbib}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps,.svg}
+\usepackage[cmex10]{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{longtable}
+%\usepackage{array}
+%\usepackage{fixltx2e}
+%\usepackage{stfloats}
+%\usepackage{dblfloatfix}
+%\usepackage{url}
+%correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\usepackage{mathchars}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[normalem]{ulem}
+%\usepackage{hyperref}
+\usepackage{footmisc}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{float}
+\usepackage{adjustbox}
+
+\usepackage{caption} 
+%\captionsetup[table]{skip=10pt}
+
+\usepackage[font={small}]{caption}
+\usepackage[margin=2.5cm]{geometry}% by courtesy of Mico
+
+%
+%%gap between table equation paragraph
+\setlength{\abovedisplayskip}{-2pt} \setlength{\abovedisplayshortskip}{-2pt}
+\setlength{\belowdisplayskip}{3pt} \setlength{\belowdisplayshortskip}{3pt}
+
+%
+\setlength{\textfloatsep}{10pt plus 1.0pt minus 5.0pt}
+\setlength{\floatsep}{10pt plus 1.0pt minus 5.0pt}
+\setlength{\intextsep}{10pt plus 1.0pt minus 5.0pt}
+\setlength{\dbltextfloatsep}{10pt plus 1.0pt minus 5.0pt}
+\setlength{\dblfloatsep}{10pt plus 1.0pt minus 5.0pt}
+
+\include{preamble}
+
+\makeatletter
+\newcommand{\thickhline}{%
+	\noalign {\ifnum 0=`}\fi \hrule height 1pt
+	\futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\newcommand{\thickcline}[1]{%
+	\@thickcline #1\@nil%
+}
+
+\def\@thickcline#1-#2\@nil{%
+	\omit
+	\@multicnt#1%
+	\advance\@multispan\m@ne
+	\ifnum\@multicnt=\@ne\@firstofone{&\omit}\fi
+	\@multicnt#2%
+	\advance\@multicnt-#1%
+	\advance\@multispan\@ne
+	\leaders\hrule\@height1pt\hfill
+	\cr
+	\noalign{\vskip-1pt}%
+}
+
+\renewcommand{\baselinestretch}{1.0} 
+\setlength{\parskip}{1em}
+
+\journal{Swarm and Evolutionary Computation}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+
+\bibliographystyle{elsarticle-num}
+\biboptions{numbers,sort&compress}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Evolutionary Algorithm Using Adaptive Fuzzy Dominance and Reference Point for Many-Objective Optimization}
+%\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+
+%% Group authors per affiliation:
+\author{Siddhartha Shankar Das, Md. Monirul Islam, \textit{Member IEEE}%\fnref{myfootnote}
+}
+\address{Department of Computer Science and Engineering, Bangladesh University of Engineering And Technology (BUET), Dhaka Bangladesh}
+
+\author{Naheed Anjum Arafat}
+\address{School of Computing, National University of Singapore~(NUS), Singapore}
+
+%\fntext[myfootnote]{Since 1880.}
+
+%%% or include affiliations in footnotes:
+%\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
+%\ead[url]{www.elsevier.com}
+%
+%\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
+%\cortext[mycorrespondingauthor]{Corresponding author}
+%\ead{support@elsevier.com}
+%
+%\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
+%\address[mysecondaryaddress]{360 Park Avenue South, New York}
+
+\begin{abstract}
+Many-objective optimization is very important for numerous practical applications. It, however,  poses a great challenge to the Pareto dominance based  evolutionary algorithms. In this paper, a fuzzy dominance based evolutionary algorithm is proposed for many-objective optimization.  The essence of the proposed algorithm is that it adaptively determines the fuzzy membership function for each objective of a given many-objective optimization problem. Furthermore, it emphasizes both convergence and diversity of all the evolved solutions in the same way by using one selection criterion. This is why  our algorithm employs the reference points for clustering the evolved solutions and selects the best ones from different clusters in a round-robin fashion. The proposed algorithm has been tested extensively on a number of benchmark problems in evolutionary computing, including eight Waking-Fish-Group~(WFG)  and three Deb-Thiele-Laumanns-Zitzler (DTLZ) problems having 2 to 25 objectives. The experimental results show that the proposed algorithm is able to solve many-objective optimization problems efficiently, and it is compared favorably with the other evolutionary algorithms devised for such problems. A parametric study is also provided to understand the influence of a key parameter of the proposed algorithm.
+\end{abstract}
+
+\begin{keyword}
+Many-objective optimization, Evolutionary algorithm, Pareto dominance, Fuzzy dominance, Reference point
+\end{keyword}
+
+\end{frontmatter}
+
+%\linenumbers
+
+\section{Introduction}
+\label{sec:introduction}
+
+Handling an optimization problem with a large number of objectives (more than three), also known as many-objective optimization problem (MaOP), using multi-objective evolutionary algorithm (EMO) has been one of the major research topics in recent years. Although Pareto dominance based EMO algorithms can efficiently solve optimization problems with two/three objectives, they face several difficulties in solving MaOPs~\citep{deb2014evolutionary}, \citep{ishibuchi2010many}.
+The reduction of selection pressure is the main difficulty faced by such algorithms. %This happens when a selection scheme fails to discriminate solutions due to the increase of non-dominated solutions. 
+Another prominent problem is the conflict between convergence and diversity, which also aggravates with the increase 
+of objectives~\citep{yang2013grid}.
+
+
+%A good number of modified dominance concepts and different ranking schemes have been introduced to improve selection pressure. Some of these concepts are subspace dominance comparison~\citep{jaimes2011adaptive}, dominance area control~\citep{dominanceareacontrol}, path control strategy~\citep{epcs}, grid dominance~\citep{yang2013grid}, $\theta$-dominance~\citep{thetadominance7080938}, fuzzy dominance~\citep{he2014fuzzy}. 
+There are also several studies that deal with improving diversity maintenance among the solutions of an evolving population. Adra and Fleming ~\citep{adraflemingdiversity} employ a diversity management operator to adjust diversity requirement in the mating and environmental selection of an EMO algorithm. 
+Wang {\it et al.}~\citep{handingdiversity} propose a new diversity measure which can be used for enhancing diversity in MaOPs.
+In~\citep{sdealgorithm}, Li {\it et al.} propose a general modification of density estimation, termed shift-based density estimation (SDE), to make Pareto-based algorithms suitable for MaOPs. A knee point driven approach~\citep{kneaalgorithm} prefers knee point among non-dominated solutions for maintaining diversity. Deb and Jain ~\citep{deb2014evolutionary} propose NSGA-III in which
+they employ reference point based clustering for ensuring diversity. In~\citep{coellotwoapproach}, Mario {\it et al.} use hierarchical clustering in decision space for diversity management. 
+
+
+%Pareto based EMO algorithms usually employ Pareto dominance relation as a primary selection criterion and the solutions' density in the objective space as a secondary selection criterion. The former criterion favors non-dominated solutions over dominated ones but the later one encourages diversity among solutions. Pareto based EMO algorithms only apply the secondary criterion when the solutions are incomparable using the primary criterion~\citep{deb2002fast}. Thus the selection pressure of these algorithms can be improved by modifying dominance concept and/or diversity maintenance mechanism. 
+%
+%A good number of modified dominance concepts and different ranking schemes have been introduced to improve selection pressure. Some of these concepts are subspace dominance comparison~\citep{jaimes2011adaptive}, dominance area control~\citep{dominanceareacontrol}, grid dominance~\citep{yang2013grid}, $\theta$-dominance~\citep{thetadominance7080938}, fuzzy dominance~\citep{he2014fuzzy}. 
+
+%There are several studies that deal with improving diversity maintenance. These mechanisms are called  active diversity promotion~\citep{purshouse2007evolutionary}. The growing interests stemmed from the issues that some approaches (e.g. crowding distance~\citep{deb2002fast}) prefers dominance resistant solutions (solutions having higher improvement in at least one objective but poor in others) and some approaches can maintain diversity well in objective space but with poor proximity to global Pareto front.
+
+%There are several studies that deal with improving diversity maintenance. For example, Adra and Fleming~\citep{adraflemingdiversity} employ a diversity management operator to adjust diversity requirement in the mating and environmental selection of an EMO algorithm. 
+%In~\citep{sdealgorithm}, Li {\it et al.} develop a general modification of density estimation, termed shift-based density estimation (SDE), to make Pareto-based algorithms suitable for MaOPs. Unlike traditional density estimation, SDE considers both distribution and convergence information of solutions.
+%A knee point driven approach~\citep{kneaalgorithm}, on the other hand, prefers knee point among non-dominated solutions for maintaining diversity.
+%Deb and Jain proposed NSGA-III~\citep{deb2014evolutionary}, an improved version of established NSGA-II~\citep{deb2002fast}, where they replaced the Crowding Distance operator with clustering approach using a set of well-distributed Reference Points to guide individuals searching for different directions. 
+%In~\citep{coellotwoapproach}, Mario {\it et al.} use hierarchical clustering in decision space for diversity management. %\textbf{The growing interests stemmed from the issues that some approaches (e.g. crowding distance~\citep{deb2002fast}) prefer dominance resistant solutions (solutions having higher improvement in at least one objective but poor in others) and some approaches can maintain diversity well in objective space but with poor proximity to global Pareto front.}
+
+As an alternative, two types of non-Pareto based approaches have been found to be promising in the EMO literature. They are decomposition based approaches and indicator based approaches. The former approach first decomposes an MOP into a number of single objective optimization sub-problems and then solves them simultaneously. Multi-objective evolutionary algorithm based on decomposition (MOEA/D)~\citep{zhang2007moea} is the most typical implementation of this class. 
+This algorithm and its variants~\citep{li2009multiobjective,zhang2009performance,moeadsas} have been quite successful in solving various MaOPs.
+Another decomposition based algorithm RVEA~\citep{referencevectorguided} uses reference vectors to decompose solutions into different sub-problems. 
+In~\citep{piceag}, a preference inspired coevolutionary algorithms, PICEAg, is proposed based on a concept of co-evolving a population of candidate solutions with a set of goals.
+
+%As an alternative, non-Pareto based approaches are also used in solving MaOPs.  Two types of such approaches have been found to be promising in the EMO literature. They are decomposition based approaches and indicator based approaches.  The former approach first decomposes an MOP into a number of single objective optimization sub-problems and then solves them simultaneously by evolving a population of solutions.  The objective of each sub-problem can be a linear or nonlinear weighted aggregation of all the individual objectives of the MOP. Multi-objective evolutionary algorithm
+%based on decomposition (MOEA/D)~\citep{zhang2007moea} is the most typical implementation of this class. This algorithm and its variants~\citep{li2009multiobjective,zhang2009performance} have been quite successful in solving various MaOPs. Another decomposition based algorithm RVEA (reference vector guided evolutionary algorithm)~\citep{referencevectorguided} uses reference vectors to decompose solutions into different sub-problems. %The solutions are associated with reference vectors based on cosine similarity measure. 
+%The salient feature of RVEA is that it dynamically adjusts the distribution of the reference vectors according to the scales of the objective functions. In~\citep{piceag}, a preference inspired co-evolutionary algorithms, PICEAg, is proposed based on a concept
+%of co-evolving a population of candidate solutions with a set of goals.
+%
+%The basic REVA works nicely for continuous and regular shaped Pareto surfaces, but fails to provide uniformity in irregular surfaces. To handle such surfaces, a separate variant of basic REVA is proposed in which reference vector with no associated solution is replaced by another reference vector generated within the minimum and maximum objective values.
+
+
+The main idea of indicator based approaches is to use a single performance indicator to optimize a desired property of an evolving population. Among the different indicators, hypervolume~\citep{zitzler1999multiobjective} is the only quality measure known to be Pareto-compliant and is ever used in multiobjective search. However, one prominent problem of hypervolume based algorithms is their extreme computational overhead. Bader and Zitzler~\citep{bader2011hype} proposed a hypervolume estimation (HypE) algorithm  to reduce computational burden. Recently, a two-archive algorithm~(Two\_Arch) for MaOP~\citep{xinyao6883177} has been proposed by combining the indicator and Pareto based approaches in one algorithm.
+
+%The main idea of indicator based approaches is to use a single performance indicator to optimize a desired property of an evolving population. Among the different indicators, hypervolume~\citep{zitzler1999multiobjective} or S-metric is the only quality measure known to be Pareto-compliant and is ever used in multi-objective search. 
+%It has been known that maximizing the hypervolume indicator is equivalent to finding the Pareto front. 
+%However, one prominent problem of hypervolume based algorithms is their extreme computational overhead. 
+%Bader and Zitzler~\citep{bader2011hype} proposed a hypervolume estimation algorithm for multi-objective optimization (HypE) to reduce computational burden. Recently, a two-archive algorithm~(Two\_Arch) for many-objective optimization~\citep{xinyao6883177} has been proposed which combines the indicator and Pareto based approaches in one algorithm.
+
+Despite the recent advancements in solving MaOPs, more effective EMOs are still needed. Among the non-Pareto based approaches, the notion of fuzzy concept has proven to be effective for MaOPs. Its strength comes from the fact that fuzzy concept can continuously differentiate solutions into different degrees of optimality beyond the classification of the original Pareto dominance.
+Which is beneficial for MaOPs because solutions which were previously incomparable can be now compared and complete or partial order of solutions can be found. Moreover given the membership functions, the fuzzy procedure does not usually require any extra computational overhead even for a very large number of objectives. The simplicity inherent within the fuzzy dominance computation makes it an appealing candidate for solving MaOPs.
+But fuzzy concepts have the issues of diversity loss and selection of appropriate parameters in different fuzzy steps. There are a few studies~\citep{he2014fuzzy,he2012new,koppen2005fuzzy,farina2004fuzzy,fuzzynasir} that utilize this concept in solving MaOPs using evolutionary algorithms and the field is still under-explored.
+
+This paper proposes a fuzzy dominance based evolutionary algorithm ($F$-DEA) for efficiently solving MaOPs.  The proposed algorithm exploits the strength of fuzzy dominance in conjunction with clustering based active diversity promotion mechanism in order to efficiently solve MaOPs.
+The novelty of $F$-DEA comes from the following new features,
+
+\begin{itemize}
+\item Diversity maintenance is the primary issue faced by any fuzzy based approaches. To maintain diversity among solutions, $F$-DEA employs reference points based clustering to select solutions for the next generation of an evolutionary process. To the best of our knowledge, $F$-DEA is the first algorithm that employs fuzzy dominance and reference point  synergistically.
+Unlike existing reference point based approaches~\citep{deb2014evolutionary,thetadominance7080938,
+	deb2006reference,piceag,referencevectorguided,epcs}, $F$-DEA uses preferred reference points based clustering to provide better cluster uniformity, remove dependency on population size and effectively handle irregular-shaped Pareto fronts.
+%The reference points and evolved solutions are considered here as the clusters' centers and members, respectively. Existing works~(e.g.~\citep{deb2014evolutionary,thetadominance7080938,deb2006reference,piceag,referencevectorguided} ) generally utilize reference points in some way for assigning fitness to the solutions.
+
+%\item  The preferred reference points based clustering provides better cluster uniformity, removes dependency on population size and effectively handles irregular-shaped Pareto fronts. %Also the preferred reference points size parameter gives control over convergence and diversity.
+
+\item $F$-DEA introduces the anti-symmetric Sigmoid membership function with an aim of  ensuring proper discrimination ability of the membership function. Existing approaches either use domain knowledge~\citep{farina2004fuzzy} or approximation procedure~\citep{he2014fuzzy}.
+
+\item To handle the scaling issue of objectives, $F$-DEA uses a separate membership function for each objective and estimates its parameter(s) adaptively. The estimation procedure handles the bias induced by isolated solutions.
+
+\item The proposed algorithm emphasizes both convergence and diversity in the same way from  beginning to end of an evolutionary process. %These aspects relate to the consideration of both diversity and convergence  in the same selection process. 
+Existing fuzzy based algorithms use fuzzy dominance  as a primary selection criterion and diversity measure  as a secondary one. This is  problematic in the sense that algorithms would rarely employ the secondary criterion as fuzzy dominance is capable of discriminating solutions.
+
+%Existing Pareto or fuzzy based algorithms use dominance relation as a primary selection criterion and diversity measure  as a secondary selection criterion. This selection mechanism is problematic for a fuzzy based algorithm as such an algorithm would rarely employ the secondary criterion as its fuzzy dominance criterion is capable of discriminating solutions.
+
+%We here argue that this selection mechanism is problematic for a fuzzy based algorithm with respect to maintaining diversity. It is  because such an algorithm would rarely employ the secondary criterion as its fuzzy dominance criterion is capable of discriminating solutions. To avoid this problem, some studies~(e.g.~\citep{he2014fuzzy}) use an extra parameter to balance between convergence and diversity but still fails to provide enough diversity in high-dimensional and non-regular Pareto~\citep{rectangleproblem}.
+
+%\item $F$-DEA has been tested extensively on  different optimization scenarios, including eight Walking-Fish-Group  (WFG)~\citep{huband2006review} and five Deb-Thiele-Laumanns-Zitzler (DTLZ)~\citep{deb2005scalable} problems. For each problem instance, we consider 2-, 3-, 5-, 7-, 10-, 12-, 15-, 20- and 25-objective. Furthermore, we evaluate and compare the performances of our algorithm on three instances of Rectangle problem~\citep{rectangleproblem}. This raises the total number of tested problem instances to 120.
+%\sout{Few algorithms have been tested on a similar range of benchmark problems.} 
+\end{itemize}
+
+%Other notable features of $F$-DEA can be summarized as follows.
+%
+%\begin{itemize}
+%
+%\item $F$-DEA introduces the anti-symmetric Sigmoid membership function with an aim of  ensuring proper discrimination 
+%ability of the membership function. The common practice is to employ the left Gaussian membership function without
+%considering the issue of discrimination ability~\citep{he2014fuzzy}.
+%The notion of objective-wise adaptive fuzzy membership function, which is  independent of the scale of the objectives' value, has also
+%been introduced in $F$-DEA. This is quite different from existing ones (e.g.~\citep{he2014fuzzy, farina2004fuzzy})  employing  a fixed and same membership function for all objectives of a given problem. The downside of such an approach lies in the difficulty of selecting the same appropriate parameter for the membership function which may not be easy in many practical scenarios. 
+%Some studies employ user-defined parameters~(e.g.~\citep{farina2004fuzzy}) while others normalize (e.g.~\citep{he2014fuzzy}) objective difference as a way to tackle this issue. Defining parameters would require domain knowledge and normalization would cause loss of information.
+%
+%\item $F$-DEA employs reference points for constructing clusters the evolved solutions. The reference points and evolved solutions are considered here as the clusters' centers and members, respectively. Existing works~(e.g.~\citep{deb2014evolutionary,thetadominance7080938,deb2006reference,piceag,referencevectorguided} ) generally utilize reference points in some way for assigning fitness to the solutions. Also, unlike existing reference point based clustering methods, $F$-DEA applies preferred reference points based clustering for providing better cluster uniformity, removing dependency on population size and effectively handling irregular-shaped Pareto fronts.
+%
+%\item We emphasize both convergence and diversity in the same way from the beginning to the end of an evolutionary process. This is why our algorithm selects the solutions for the next generation by employing a cluster based selection scheme. The scheme selects the same (or nearly the same) number of best solutions from each of different clusters in a round robin fashion. 
+%%The selected solutions of a particular cluster are better compared to the other solutions of the same cluster. They, however, differ from the solutions of the other clusters with respect to their locations in the objective space. 
+%These aspects relate to the consideration of both diversity and convergence  in the same selection process. 
+%Existing Pareto or fuzzy based algorithms use dominance relation as a primary selection criterion and diversity measure  as a secondary selection criterion. We here argue that this selection mechanism is problematic for a fuzzy based 
+%algorithm with respect to maintaining diversity. It is  because such an algorithm would rarely employ the secondary criterion as its fuzzy dominance criterion is capable of discriminating solutions. To avoid this problem, some studies~(e.g.~\citep{he2014fuzzy}) use an extra parameter to balance between convergence and diversity but still fails to provide enough diversity in high-dimensional and non-regular Pareto~\citep{rectangleproblem}.
+%
+%
+%\item $F$-DEA has been tested extensively on  different optimization scenarios, including eight Walking-Fish-Group  (WFG)~\citep{huband2006review} and five Deb-Thiele-Laumanns-Zitzler (DTLZ)~\citep{deb2005scalable} problems. For each problem instance, we consider 2-, 3-, 5-, 7-, 10-, 12-,
+%15-, 20- and 25-objective. Furthermore, we evaluate and compare the performances of our algorithm on three instances of Rectangle problem~\citep{rectangleproblem}.
+%This raises the total number of tested problem instances to 120. %\sout{Few algorithms have been tested on a similar range of benchmark problems.} 
+%\end{itemize}
+
+%$F$-DEA has been tested extensively on  different optimization scenarios, including eight Walking-Fish-Group  (WFG)~\citep{huband2006review} and five Deb-Thiele-Laumanns-Zitzler (DTLZ)~\citep{deb2005scalable} problems. For each problem instance, we consider 2-, 3-, 5-, 7-, 10-, 12-, 15-, 20- and 25-objective. Furthermore, we evaluate and compare the performances of our algorithm on three instances of Rectangle problem~\citep{rectangleproblem}. This raises the total number of tested problem instances to 120.
+The rest of this paper is organized as follows. Section~\ref{sec:litrev} introduces the basic concepts of fuzzy in relation with EMO algorithms, issues arises therein and related works. 
+We present the proposed $F$-DEA at length in Section~\ref{sec:ourapproach}. In Section~\ref{sec:expstudies}, several different kinds of algorithms for MaOPs are included in our experimental studies, comparisons, and discussions.
+Finally, Section~\ref{sec:conclusion} concludes the paper
+with a brief summary and a few remarks.
+
+\section{Preliminaries and Related Work}
+\label{sec:litrev}
+%The loss of selection pressure occurs when a selection scheme fails to discriminate solutions based on their objective values. To overcome this problem, a myriad  of techniques have been proposed which are highlighted in the previous section. One such technique is the incorporation fuzzy concepts in fitness evaluation, which is also employed in the proposed $F$-DEA. 
+%In this section, some related fuzzy based works, basic ideas of fuzzy logic, the issues of using such concepts in the existing methodologies and other related works of $F$-DEA are discussed.
+
+%\subsection{Fuzzy Logic and Issues with existing approaches}
+\subsection{Preliminaries}
+The term fuzzy logic refers to a form of many-valued logic in which the output of a set of inputs may be any real value between $0$ and $1$. The application of this concept to solve a problem usually requires three steps: fuzzification, fuzzy inference and defuzzification. Fuzzification converts input data into membership degrees (values) using some functions, called membership functions. %The inference step combines the membership values to derive a fuzzy output. Finally, in the defuzzification step, the fuzzy output is converted back to a crisp output, if necessary.
+%A variety of membership functions has been used in the literature. %These include triangular shaped, trapezoidal-shaped, Gaussian, bell-shaped, and Sigmoidal membership functions. 
+%The choice of membership function, however, is dependent on the nature of applications. %As a membership function, the left Gaussian function, as depicted in Fig. 1, is usually employed in the EMO literature (e.g. ~\citep{he2014fuzzy,he2012new,farina2004fuzzy}).
+%The term fuzzy logic was first introduced by Lotfi Zadeh (1965) through  his seminal work ``Fuzzy sets".  It refers to a form of many-valued logic in which the output of a set of inputs may be any real value between $0$ and $1$, beyond crisp value (say, true and false).  The application of fuzzy logic to solve a problem usually requires three steps: fuzzification, fuzzy inference and defuzzification. Fuzzification converts input data into membership degrees (values) using  some functions, called membership functions. 
+%The inference step combines the  membership values to derive a fuzzy output. Finally, in the defuzzification step, the fuzzy output is converted back to a crisp output, if necessary.
+%As the aim of applying fuzzy concept into EMO algorithms is to make the incomparable solutions to comparable ones, defuzzification is not necessary. 
+%Let $F$ is a fuzzy set and $v$ is an element of any set $V$. We call $\gamma_F(v)$ as the membership value of $v$ in $F$, which quantifies the membership degree  of $v$ to  $F$. If $\gamma_F(v)$ is $0$ (or $1$), it  indicates $v$ is not a member (or fully a member) of $F$. The values between $0$ and $1$ characterize fuzzy members, representing $v$ belongs to $F$ only partially.
+%The  membership function plays an important role to solve a problem using fuzzy logic. A variety of membership functions has been used in the literature. These include triangular-shaped, trapezoidal-shaped, Gaussian, bell-shaped, and Sigmoidal membership functions. 
+%The choice of membership function, however, is dependent on the nature of applications. For example, the triangular-shaped or trapezoidal-shaped membership function is used for those applications that require significant variation within a short period of time, while the Gaussian or Sigmoid one is used for those applications that require high precision.
+%The membership function plays an important role to solve a problem using fuzzy logic. A variety of membership functions has been used in the literature. These include triangular shaped, trapezoidal-shaped, Gaussian, bell-shaped, and Sigmoidal membership functions. The choice of membership function, however, is dependent on the nature of applications. As a membership function, the left Gaussian function, as depicted in Fig. 1, is usually employed in the EMO literature (e.g. ~\citep{he2014fuzzy,he2012new,farina2004fuzzy}).
+%Pareto dominance based EMO algorithms compare two solutions ${\bf x}^a = x^a_1, x^a_2, \ldots, x^a_n$  and ${\bf x}^b = x^b_1,x^b_2, \ldots, x^b_n$  based on their objective vectors ${\bf f}({\bf x}^a) = f_1({\bf x}^a), f_2({\bf x}^a), \ldots, f_m({\bf x}^a)$ and ${\bf f}({\bf x}^b) = f_1({\bf x}^b), f_2({\bf x}^b), \ldots, f_m({\bf x}^b)$, respectively. In line with this, fuzzy based  EMO algorithms can utilize the difference of the objective vectors as the argument of the membership function i.e., $v = f_i({\bf x}^a) - f_i({\bf x}^b)$ or $v = f_i({\bf x}^b) - f_i({\bf x}^a)$.
+As a membership function, the left Gaussian function, as depicted in Fig.~\ref{fig:leftgaussianupdated}, is usually employed in the EMO literature~(e.g.~\citep{he2014fuzzy}, ~\citep{farina2004fuzzy}). An interesting feature of this function is its monotonic decreasing nature. The analytic form of this function is 
+
+\begin{equation} \label{eq:gaussianeqn}
+\gamma_g(v)=\frac{1}{\sigma\sqrt{2\pi}}\mathrm{e}^{-\frac{(v-c)^2}{2\sigma^2}}.
+\end{equation}
+
+\begin{figure}[htbp] 
+\centering 
+   		
+\includegraphics[width=3.3in,height=1.50in]{figures/relatedworks/Ngaussianfunctionwfg2_3.eps}
+
+\caption{Left Gaussian Membership Function. This particular case shows the position of mean nomalized objective difference value ($\bar{\mu_3}$) for the third  objective of WFG2 problem obtained from the $250^{th}$ generation of a particular seed.}
+\label{fig:leftgaussianupdated}
+\end{figure}
+
+It is seen from Eq.~(\ref{eq:gaussianeqn}) that the Gaussian function is defined by two parameters, $c$ and $\sigma$. 
+While $c$ represents mean and it is set to $-1$, $\sigma$ defines the spread of the Gaussian function and  it is set to $0.5$ as a compromise. It has been indicated that setting $\sigma$ too large or too small leads to the inability to discriminate $v\in [-1, 0]$  
+or $v \in [0, 1]$~\citep{he2014fuzzy}. Even setting $\sigma$ in this way may create uneven discrimination between the entire domain of $v\in [-1, 1]$. This can be attributed from Fig.~\ref{fig:leftgaussianupdated} that the discrimination ability of $\gamma_g(v)$ for $v\in [-1, 0]$ and for $v \in [0, 1]$ is not similar because the curve's nature in the said ranges are not identical.
+Pareto dominance based EMO algorithms compare two solutions ${\bf x}^a = x^a_1, x^a_2, \ldots, x^a_n$  and ${\bf x}^b = x^b_1,x^b_2, \ldots, x^b_n$  based on their objective vectors ${\bf f}({\bf x}^a) = f_1({\bf x}^a), f_2({\bf x}^a), \ldots, f_m({\bf x}^a)$ and ${\bf f}({\bf x}^b) = f_1({\bf x}^b), f_2({\bf x}^b), \ldots, f_m({\bf x}^b)$, respectively. In line with this, fuzzy based  EMO algorithms utilize the difference of  objective vectors as the argument of the membership function i.e., $v = f_i({\bf x}^a) - f_i({\bf x}^b)$ or $v = f_i({\bf x}^b) - f_i({\bf x}^a)$.
+
+An MaOP may or may not have an identical range of values for its each objective, 
+$f_i$. To handle this issue, we may use a different membership function for each of 
+different objectives i.e.,  a separate $\sigma$ for each objective. A similar concept is used in~\citep{farina2004fuzzy} where $\sigma$ is chosen manually.
+ This will, however, require rich domain knowledge for each problem we like to solve.
+Alternatively, we may normalize $v$ by the maximum difference among all pairs of solutions in that 
+objective and can use the same membership function for all objectives. This alternative approach is used in some previous studies~(e.g.~\citep{he2014fuzzy}). The downside of normalization is the loss of information and influence of very large/small isolated value(s).
+
+%Table~\ref{table:gaussianexample2} explains the aforementioned fact. In this particular scenario, there are two solutions $\textbf{x}^a$ and $\textbf{x}^b$ having objectives, $f_1$ and $f_2$. The objectives'
+%differences with respect to these solutions i.e., $f_1({\bf x}^a) - f_1({\bf x}^b)$
+%and $f_2({\bf x}^a) - f_2({\bf x}^b)$ are $-0.02$ and $0.08$, respectively.
+%For a minimization problem, the negative and positive signs indicate that ${\bf x}^a$  and ${\bf x}^b$ are better with respect to its counterpart, respectively. Clearly, the improvement of ${\bf x}^a$ with respect to $f_1$  is less than that of ${\bf x}^b$ with 
+%respect to $f_2$. Let the maximum objective difference of $f_1$ ($df_1^{max}$) is 0.3 and that of $f_2$ ($df_2^{max}$) is 1.5. The normalized objective differences for $\textbf{x}^a$ to $\textbf{x}^b$ in $f_1$ and $f_2$ are $-0.0667$ and $0.0533$, respectively. These differences indicate the relative improvement of $\textbf{x}^a$ over $\textbf{x}^b$ with respect to $f_1$ and $f_2$. 
+%It is now evident that if the objective values are in different range we can have an improper impact on membership values through normalization.
+%
+%\begin{table}[!h]
+%\centering
+%\caption{Effect of normalization in the Gaussian member function}
+%\label{table:gaussianexample2}
+%\setlength{\tabcolsep}{2pt}
+%\renewcommand{\arraystretch}{1.1}
+%\begin{tabular}{lll}
+%\thickhline
+%\multicolumn{2}{l|}{Max. Abs. Obj. Difference of $f_1$ $(df_1^{max})$}              & 0.3            \\
+%\multicolumn{2}{l|}{Max. Abs. Obj.  Difference of $f_2$ $(df_2^{max})$}              & 1.5            \\\thickhline
+%\multicolumn{1}{l|}{Solution}               & $f_1(.)$   & $f_2(.)$   \\\thickhline
+%\multicolumn{1}{l|}{$\textbf{x}^a$}                     & 0.2            & 0.2            \\
+%\multicolumn{1}{l|}{$\textbf{x}^b$}                     & 0.22           & 0.12           \\\hline
+%\multicolumn{1}{l|}{$ v_i = f_i(\textbf{x}^a)-f_i(\textbf{x}^b)$}         & -0.02          & 0.08           \\
+%\multicolumn{1}{l|}{$\overline{v} = v/df_i^{max}$}   & -0.0667 & 0.0533  \\
+%\multicolumn{1}{l|}{$\gamma_g(\overline{v})$}  & 0.1397   & 0.0867  \\\hline
+%\multicolumn{1}{l|}{$ v = f_i(\textbf{x}^b)-f_i(\textbf{x}^a)$}         & 0.02           & -0.08          \\
+%\multicolumn{1}{l|}{$\overline{v} = v/df_i^{max}$}   & 0.0667  & -0.0533 \\
+%\multicolumn{1}{l|}{$\gamma_g(\overline{v})$} & 0.0819  & 0.1329   \\\thickhline
+%%\multicolumn{2}{l|}{$dom(\textbf{x}^2,\textbf{x}^3)=\prod^{2}_{i=1}g_i(\overline{d}(f_i(\textbf{x}^2)-f_i(\textbf{x}^3)))$}                 & 0.0121  \\
+%%\multicolumn{2}{l|}{$dom(\textbf{x}^3,\textbf{x}^2)=\prod^{2}_{i=1}g_i(\overline{d}(f_i(\textbf{x}^3)-f_i(\textbf{x}^2)))$}                 & 0.0109  \\
+%%\multicolumn{2}{l|}{$\phi(\textbf{x}^2,\textbf{x}^3)=\frac{dom(\textbf{x}^2,\textbf{x}^3)}{dom(\textbf{x}^2,\textbf{x}^3)+dom(\textbf{x}^3,\textbf{x}^2)}$}                             & 0.5266   \\
+%%\multicolumn{2}{l|}{$\phi(\textbf{x}^3,\textbf{x}^2)=\frac{dom(\textbf{x}^3,\textbf{x}^2)}{dom(\textbf{x}^2,\textbf{x}^3)+dom(\textbf{x}^3,\textbf{x}^2)}$}                             & 0.4733   \\\thickhline
+%\end{tabular}
+%\end{table}
+
+%We have already raised two important issues of the membership function in the fuzzification step. They are uneven discrimination ability and normalization of the objective difference. 
+
+In the inference step, to compute dominance of one solution with respect to other (e.g. $\textbf{x}^a$ over $\textbf{x}^b$), the fuzzy membership values of $m$-objective differences ($f_i({\bf x}^a)-f_i({\bf x}^b), i=1,2,\cdots,m$) are combined.                                                                                                                                                                 Irrespective of the type of membership function, any suitable fuzzy set theoretic operation can be used for 
+combination~\citep{mendel1995fuzzy}. %Table~\ref{table:fuzzysetoperation} shows some typical inference operations. The fuzzy intersection set operation is generally used for a minimization problem. 
+The most popular intersection set operation used in MaOPs is the product operation, also known as $t$-norm operation. 
+
+\begin{comment}
+%\vspace{-20pt}
+\begin{table}[!h]
+\centering
+\caption{Some common fuzzy set operations to combine membership values in the inference step
+of fuzzy logic}
+\label{table:fuzzysetoperation}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{c|c}
+\thickhline
+OR(Union) & And(Intersection) \\\thickhline
+$Max(\{\gamma_1(v_1),\gamma_2(v_2)\})$          & $Min(\{\gamma_1(v_1),\gamma_2(v_2)\})$     \\
+$\gamma_1(v_1)+\gamma_2(v_2)-\gamma_1(v_1)\times\gamma_2(v_2)$          & $\gamma_1(v_1)\times\gamma_2(v_2)$\\
+$Min(\{1,\gamma_1(v_1)+\gamma_2(v_2)\})$          & $Max(\{0,\gamma_1(v_1)+\gamma_2(v_2)-1\})$     \\\thickhline
+\end{tabular}
+\end{table}
+\end{comment}
+
+%\vspace{-20pt}
+The following equations show the fuzzy inference and relative dominance computation procedure of two $m$-objective solutions, $\textbf{x}^a$ and $\textbf{x}^b$.
+\begin{align}
+	 dom({\bf x}^a, {\bf x}^b) = \prod^{m}_{i=1} \gamma_i(f_i({\bf x}^a)-f_i({\bf x}^b))\label{eq:domi1}\\
+	 dom({\bf x}^b, {\bf x}^a) = \prod^{m}_{i=1} \gamma_i(f_i({\bf x}^b)-f_i({\bf x}^a))\label{eq:domi2}
+\end{align}
+
+\begin{eqnarray}
+\phi({\bf x}^a, {\bf x}^b)=\frac{dom({\bf x}^a, {\bf x}^b)}{dom({\bf x}^a, {\bf x}^b) + dom({\bf x}^b, {\bf x}^a)}\label{eq:re-domi1} \\
+\phi({\bf x}^b, {\bf x}^a)=\frac{dom({\bf x}^b, {\bf x}^a)}{dom({\bf x}^a, {\bf x}^b) + dom({\bf x}^b, {\bf x}^a)}\label{eq:re-domi2}
+\end{eqnarray}
+
+\noindent where  $dom({\bf x}^i, {\bf x}^j)$ is  a scalar value and represents  how much $\textbf{x}^a$ dominates 
+$\textbf{x}^b$. The term  $\phi({\bf x}^a, {\bf x}^b)$ indicates the relative dominance of ${\bf x}^a$ to ${\bf x}^b$. We consider ${\bf x}^a$ dominates ${\bf x}^b$ iff $dom({\bf x}^a, {\bf x}^b) > dom({\bf x}^b, {\bf x}^a)$ and non-dominated iff $dom({\bf x}^a, {\bf x}^b) = dom({\bf x}^b, {\bf x}^a)$.
+It is evident from the above relations that if one solution is Pareto dominated then it  will also be fuzzy dominated and if two solutions are fuzzy non-dominated they are Pareto non-dominated. 
+However, it is very unlikely that two different solutions will have a same fuzzy dominance value (fuzzy non-dominated) even though they are Pareto non-dominated. Because of the different objective differences, fuzzy dominance is able to discriminate two solutions even when they are Pareto non-dominated. Therefore Pareto dominance can be considered as a special case of fuzzy dominance.
+  
+In defuzzification step, the dominance impact of one solution with respect to other solutions can be combined, ranked 
+or used instead of Pareto 
+dominance~\citep{he2014fuzzy,he2012new,koppen2005fuzzy,farina2004fuzzy,fuzzynasir}. An important observation is that irrespective of a membership function and a set theoretic operation, we end up with only a scalar fuzzy value which does not tell anything about diversity. If the solutions are selected solely based on the fuzzy dominance values, the chosen solutions will be less diverse and will not able to cover the entire Pareto front of a given problem. This can be seen from the experimental evidences provided in a recent study~\citep{sdealgorithm}. Some existing approaches (e.g.~\citep{he2014fuzzy}, \citep{fuzzynasir}) use a threshold parameter to divide solutions into different fronts but still fails to provide enough diversity in high-dimensional and non-regular Pareto~\citep{rectangleproblem}.
+
+%In summary, with respect to existing fuzzy works, three issues need to be addressed while using fuzzy dominance in an EMO algorithm. These include uneven discrimination ability of the membership function, normalization of the objective difference and loss of diversity during environmental selection. 
+
+
+\subsection{Related Work}
+There are a very few fuzzy based EMO algorithms in the literature. 
+%In~\citep{he2014fuzzy,he2012new}, the authors utilized fuzzy dominance concept to continuously differentiate individuals of a population into different degrees of optimality beyond the classification of the original Pareto dominance. They used  the same left Gaussian function as a membership function for all objectives of a given MaOP. To maintain diversity, the authors used a user-defined parameter.  The fuzzy concept was incorporated into the designs of NSGA-II and SPEA2 as a case study.
+
+
+%\citep{he2014fuzzy,he2012new,koppen2005fuzzy,farina2004fuzzy,fuzzynasir}
+
+%Farina and Amato~\citep{farina2004fuzzy} proposed different fuzzy-based definitions of optimality and used preference information to incorporate human decision making. A parameter used and when its value is zero, the introduced definitions coincide with classical Pareto-optimality. If the value is increased (maximum one), then different subset of Pareto optimal solutions can be obtained corresponding to higher degrees of optimality.
+
+
+In~\citep{farina2004fuzzy}, Farina and Amato proposed definitions of fuzzy-based optimality for multi-objective optimization. The main idea behind the given definitions is to introduce different degree of optimality. 
+For each objective, the authors used a combination of three Gaussian functions as a non-adaptive membership function. The purpose of such a combined mechanism is to distinguish amongst better, equal and worse objective differences between two solutions. The proposed definitions have been applied on two simple multi-criteria decision making problems and two MOPs. 
+
+
+%In~\citep{fuzzynasir}, Nasir et al. introduced a decomposition based fuzzy dominance algorithm (MOEA/DFD) where a fuzzy Pareto dominance concept is used to compare two solutions and used the scalar decomposition method only when one of the solutions fails to dominate the other in terms of a fuzzy dominance level.
+
+
+
+
+%In~\citep{koppen2005fuzzy} Koppen and Garcia incorporated generic ranking scheme where the vector fitness values of a population can be replaced by the computed ranking values (representing the ``dominating strength`` of an individual against all other individuals in the population) and used to perform standard single-objective genetic operators. Based on that Fuzzy-Dominance Driven GA (FDD-GA), was proposed.
+
+The work described in~\citep{koppen2005fuzzy} studied the fuzzyfication of Pareto dominance relation and its application to the design of an EMO algorithm. In fuzzyfication, the authors used a non-symmetric membership function. Solutions those have high performance in one objective but poor in others will be preferred in the given fuzzy dominance definition. As no additional diversity measure was used in~\citep{koppen2005fuzzy}, the evolving population will lose diversity.
+To verify the usefulness of proposed EMO algorithm, an analytic study of the Pareto-Box problem was provided.
+
+Nasir {\it et al.}~\citep{fuzzynasir} introduced a decomposition based fuzzy dominance algorithm (MOEA/DFD). For all objectives, the algorithm uses a general membership function of $Ae^{-x}$ with uneven discrimination power. As the same membership function is used for all objectives, scaling issues are not addressed here. In comparing solutions, MOEA/DFD employed fuzzy dominance when a solution's dominance level   is found greater than a particular threshold value. Otherwise, it used decomposition based weighted approach, which is able to handle diversity.
+The performance of MOEA/DFD was evaluated on twelve benchmark problems having two-objective to five-objective.
+
+
+In~\citep{he2014fuzzy,he2012new}, the authors utilized fuzzy dominance concept to continuously differentiate individuals of a population into different degrees of optimality. They used  the same left Gaussian function as a membership function for all objectives of a given MaOP. 
+To handle the scaling issue, the objective differences are normalized by corresponding maximum objective difference value. The fuzzy concept was incorporated into NSGA-II and SPEA2 as a case study and termed them  FD-NSGA-II and FD-SPEA2. In FD-NSGAII, a threshold value is used to divide solutions into different fronts based on the fuzzy dominance value. However, the solutions in the last front are chosen based on crowding distance. As fuzzy dominance is capable of discriminating solutions, crowding distance will rarely be used. 
+Moreover, crowding distance has already found to be ineffective on MaOPs~\citep{purshouse2007evolutionary,deb2014evolutionary,thetadominance7080938}.
+In FD-SPEA2, the best $N$ solutions for next generation are taken based on fuzzy dominance values.
+The performance of the proposed algorithm was evaluated on seven DTLZ problems and two WFG problems having 5-, 10- and 20-objective.
+
+
+%The proposed framework described in the following section uses a preferred reference point based clustering along with adaptive Sigmoid membership function to deal with the issues commonly faced by other fuzzy based approaches. While the preferred reference point based clustering is used to deal with diversity promotion (section~\ref{subsec:clustering}), the adaptive membership function~(\ref{subsec:membershipFunction}) is employed to handle the objective scaling issue.
+
+%\subsection{Related Reference Points and Clustering Approaches}
+%
+%
+% The reference points and evolved solutions are considered in $F$-DEA as the clusters' centers and members, respectively. Existing works~(e.g.~\citep{deb2014evolutionary,thetadominance7080938,deb2006reference,piceag,referencevectorguided} ) generally utilize reference points in some way for assigning fitness to the solutions.
+%
+%Some previous non-fuzzy studies~\citep{thetadominance7080938,deb2014evolutionary,coellotwoapproach} also employ clustering in EMO algorithms.  
+%
+%The clustering procedure of $F$-DEA differs from NSGAIII~\citep{deb2014evolutionary} with two notable exceptions. Firstly, $F$-DEA employs preferred reference points based clustering to provide better cluster uniformity, remove dependency on population size and handle irregular shaped Pareto fronts.
+% Secondly, $F$-DEA employs cosine similarity instead of Euclidean distance to find the solutions' association
+%	with the generated reference points. It is suitable  because angle between a reference point and a candidate solution remains constant irrespective of exact distance from the ideal point, which handles the scaling issue of the generated reference points. The  $\theta$-dominance algorithm~\citep{thetadominance7080938} also uses reference points based clustering similar to NSGAIII with an exception in normalization procedure. In~\citep{coellotwoapproach},  clustering based elitist genetic algorithm (CEGA) uses  a bottom up hierarchical approach  in the decision variable space not in the objective space. %The basic notion of CEGA is that convergence with a poorly spread set of Pareto-optimal solutions is preferred than a well-spread set of solutions which are far from the Pareto-optimal surface. The procedure and notion of this clustering is different from the one we employ in $F$-DEA. The investigation of how different clustering approaches work in the context of $F$-DEA is outside the scope of this paper and would be the topic of a separate paper.
+%
+%The proposed framework described in the following section uses a preferred reference point based clustering approach along with adaptive Sigmoid membership function to deal with the issues commonly faced by other fuzzy based approaches. 
+
+
+\section{Proposed Algorithm}
+\label{sec:ourapproach}
+
+%\textbf{Algorithm's key feature, novelty}
+
+In order to avoid the detrimental effect of uneven discrimination and objective normalization, $F$-DEA employs a separate membership function for each objective and determines its parameters adaptively. 
+%We here argue that it is better to use a separate membership function with adaptive parameters while solving MOPs using fuzzy based EMO algorithms. 
+It also employs preferred reference points based clustering for ensuring diversity in its environmental selection.  
+These features make the proposed algorithm different from others.
+
+%\textbf{From the previous section we can realize that the fuzzy concept is particularly suitable for many objective problem as it can effectively offer comparability among non-dominated solutions for large number of objectives. The proposed $F$-DEA utilizes this notion and handles the issues faced by existing approaches. 
+
+%Adopting only the fuzzy dominance relation is not sufficient for an evolutionary algorithm to solve MaOPs with good convergence and diversity. It is because no technique is embedded in such a dominance relation for ensuring diversity. This is also true for the Pareto dominance relation. The proposed $F$-DEA thus utilizes the concept of reference points in conjunction with fuzzy dominance for balancing between convergence and diversity while solving MaOPs. Unlike existing reference points based algorithms (e.g.~\citep{wang2013preference,deb2006reference,jin2002incorporation}), $F$-DEA employs reference points for constructing clusters using the solutions of an evolving population.
+
+The algorithm  starts with a randomly generated parent population $P_t$ of $N$ solutions and a set of generated/supplied reference points $R^g/R^s$. It then creates an offspring population $Q_t$ of size $N$ by applying crossover and mutation. 
+%All the solutions in the combined population $C_t$ (=$P_t \bigcup Q_t$) and the reference points  may reside at different regions of the $m$-dimensional objective space. 
+Based on the positional information in the objective space, $F$-DEA finds $p$ preferred points ($p\le N$) and constructs clusters using the solutions as members  and the preferred points as centers.
+It then adaptively constructs $m$ fuzzy membership functions i.e., one function for each objective 
+and utilizes them to compute dominance degrees of the solutions. Finally, $F$-DEA assigns fitness to the solutions and selects the best ones from different clusters in a round-robin fashion to from a new population $P_{t+1}$ for the next generation.  
+We summarize the steps of our method in Algorithm 1, which are explained further as follows.
+
+
+
+%%%%%%%%%%%%%%%%Complete Algorithm%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{algorithm}[!h]
+	
+	\textbf{Input:} $R^g/R^s$ (generated reference points or supplied points), $P_t$ (parent population of $t$-th generation), $N$ (population size)\\
+	\textbf{Output:} $P_{t+1}$
+	
+	\begin{algorithmic}[1]
+		\STATE $Q_t \gets $ Recombination and Mutation on $P_t$
+		\STATE $C_t \gets P_t \cup Q_t$				
+		\STATE Select $p\le N$ preferred reference points:\\ $R^p \gets PreferredReferencePoint(C_t, R^g/R^s, p)$	
+		\STATE Construct clusters using $R^p$:\\ $R^p(\{{\bf r}^j,X({\bf r}^j)|1\le j\le p\})$ \% ${\bf r}^j$: $j$-th reference point in $R^p$, $X({\bf r}^j)$: associated solution with ${\bf r}^j$
+		\STATE Construct $m$ membership functions:\\$(\gamma_1,\gamma_2\cdots\gamma_m) \gets AdaptiveMembershipFunction(C_t)$		
+		\STATE Assign fitness to solutions within individual cluster:\\ $FitnessAssignment(R^p,C_t,\gamma)$
+		\STATE Sample solution from each cluster:\\ $P_{t+1}\gets SamplingSelection(R^p,N)$
+		
+	\end{algorithmic} 
+	
+	\caption{Generation $t$ of $F$-DEA}
+	
+	\label{alg:completeAlgorithm}
+\end{algorithm}
+
+%%%%%%%%%%%%%%%%%Preferred REference Point%%%%%%%%%%%%%%%%%
+
+\begin{algorithm}[!h]
+	
+	\textbf{Input:} $R^g/R^s$, $C_t$ (combined population), $p$ (maximum size of preferred reference points)\\
+	\textbf{Output:}  $R^p(\{{\bf r}^j,X({\bf r}^j)|1\le j\le p\})$ $($set of preferred reference points ${\bf r}^j$s with associated cluster of solutions $X({{\bf r}^j})s)$
+	
+	\begin{algorithmic}[1]
+		
+		\FOR{each solution ${\bf x} \in C_t$}
+			\STATE Normalize $f({\bf x})$: $\tilde{f}({\bf x}) = \tilde{f}_1({\bf x}),\tilde{f}_2({\bf x}),\ldots\tilde{f}_m({\bf x})$
+		\ENDFOR
+		
+		%STATE Normalize the objective values $({\bf f}^{nor}({\bf x}) = f_1^{nor}({\bf x}),  f_2^{nor}({\bf x}), \ldots f_m^{nor}({\bf x}))$ of each  solution ${\bf x} \in C_t$
+		
+		\STATE $R^{a} = \{\emptyset\}$ 
+		%\STATE $E = \emptyset$
+		
+		\FOR{each solution ${\bf x} \in C_t$}
+		\STATE $\mathbf{r}= {\mathbf{r^g}:\argmax_{\mathbf{r^g}\in R^g/R^s}({S(\mathbf{r^g},\tilde{\bf f}({\bf x})))}}$
+		\IF{$\mathbf{r} \notin R^a$}
+		\STATE $X(\mathbf{r}) =\{\bf x\}$
+		\STATE $R^a = R^a \bigcup \{\mathbf{r}\}$
+		\ELSE
+		\STATE $X(\mathbf{r}) = X(\mathbf{r}) \bigcup \{\mathbf{x}\}$ 
+		\ENDIF
+		%\STATE $E= E \bigcup \{X^r\}$
+		\ENDFOR
+		
+		
+		\IF{$\left|R^{a}\right| > p$}
+		\STATE Sort $R^a$: $MinMax(R^a)$
+		\STATE $R^p$ = First $p$ points of $R^a$
+		\STATE $R^r = (R^a-R^p)$
+		\FOR{each ${\mathbf{r}^r \in R^r}$}
+		\FOR{each solution ${\bf x} \in X({{\bf r}^r})$}
+		\STATE $\mathbf{r}= {{{\bf r}^p}:\argmax_{{{\bf r}^p}\in R^p}({S({{\bf r}^p},\tilde{\bf f}({\bf x})))}}$
+		\STATE $X({\bf r})$=$X({\bf r}) \bigcup \{\bf x\}$ 
+		\ENDFOR
+		
+		\ENDFOR	
+		
+		\ELSE	
+		\STATE $R^p$ = $R^a$	 	 	
+		\ENDIF
+		
+	\end{algorithmic}
+	\caption{$PreferredReferencePoint(C_t, R^g/R^s, p)$ }
+	
+	\label{alg:prefferedReferencePoint}
+\end{algorithm}
+
+
+
+%%%%%%%%%%%MinMax%%%%%%%%%%%%%%%%%%%%
+
+\begin{algorithm}[!h]
+	
+	\textbf{Input:} $R$ (reference points)\\
+	\textbf{Output:} $R^{st}$ (reference points sorted according to $MinMax$ distance)
+	
+	\begin{algorithmic}[1]
+		
+		\STATE $R^{st} = \emptyset$
+		\STATE $R^m$ = A set of $m$ extreme points (one for each objective) chosen from $R$ 
+		\STATE $R^{st} = R^{st} \bigcup R^m$
+		\STATE ${R}^\prime = R-R^{st}$
+		\FOR{\textbf{each} $\mathbf{r}$ in ${R}^\prime$}	
+		\STATE Distance measure: $dist(\mathbf{r})=\displaystyle\min\limits_{\forall \mathbf{r}^{st} \in R^{st}}{d(\mathbf{r}, \mathbf{r}^{st})}$
+		\ENDFOR
+		
+		\WHILE {${R}^\prime \neq \emptyset$}
+		\STATE $\mathbf{r}^b =\mathbf{r}:\argmax_{\mathbf{r}\in R^\prime} dist(\mathbf{r})$
+		\STATE $R^s=R^s \bigcup \{\mathbf{r}^b\}$
+		\STATE ${R}^\prime = {R}^\prime-\{\mathbf{r}^b\}$	
+		
+		\FOR{\textbf{each} $\mathbf{r}$ in ${R}^\prime$}							
+		\STATE Update: $dist(\mathbf{r})=\displaystyle\min{(dist(\mathbf{r}),d(\mathbf{r},\mathbf{r}^b))}$
+		\ENDFOR
+		
+		\ENDWHILE	
+		
+	\end{algorithmic}
+	\caption{$MinMax(R)$}
+	
+	\label{alg:MinMaxAlgo}
+\end{algorithm}
+
+
+%%%%%%%%%%%%%%%%Adaptive Membership Function%%%%%%%%%%%%%%%%%%%
+
+%\begin{algorithm}[!h]
+%	
+%	\textbf{Input:} $C_t$\\
+%	\textbf{Output:} $\gamma = \gamma_1, \gamma_2, \ldots \gamma_m$ (membership functions for $m$ objectives)
+%	
+%	\begin{algorithmic}[1]
+%		\FOR{$i = 1 \ \text{to} \ m$}
+%			\STATE Compute mean $\mu_i$ and variance $\sigma_i^2$ from the pair-wise objective value differences, $|f_i({\bf x}^a)-f_i({\bf x}^b)|$, of all solutions in $C_t$% using Eqs.~(\ref{eq:meanvalue}) and~(\ref{eq:varianevalue}).
+%			\STATE Compute growth rate $\alpha_i$ from $\mu_i$ and $\sigma_i^2$ using Eq.~(\ref{eq:alpha})% 	\STATE Compute growth rate $\alpha_i$, from $\mu_i$ and $\sigma_i$ using  equation \ref{eq:alphaCalculation}
+%			\STATE Construct the membership function $\gamma_i$ with $\mu_i$ and $\alpha_i$ as its parameters using Eq.~(\ref{eq:SigmoidFunction})
+%		\ENDFOR
+%		
+%	\end{algorithmic}
+%	\caption{$AdaptiveMembershipFunction(C_t)$}
+%	
+%	\label{alg:adaptivemembershipfunction}
+%\end{algorithm}
+
+
+%%%%%%%%%%%%%%%%%%%%Fuzzy domination degree%%%%%%%%%%%%%%%%%%%%
+
+
+%\begin{algorithm}[!h]
+%	\textbf{Input:} $\mathbf{x}^a,\ \mathbf{x}^b,\ \gamma$\\
+%	\textbf{Output:} $[\phi(\mathbf{x}^a, \mathbf{x}^b),\phi(\mathbf{x}^b, \mathbf{x}^a)]$
+%	(dominance degree of $\mathbf{x}^a$ over $\mathbf{x}^b$ and $\mathbf{x}^b$ over $\mathbf{x}^a$)
+%	
+%	\begin{algorithmic}[1]
+%		\STATE Compute $dom(\mathbf{x}^a, \mathbf{x}^b), dom(\mathbf{x}^b, \mathbf{x}^a)$ using Eqn.\ref{eq:domi1}, \ref{eq:domi2}
+%		\STATE Compute $\phi(\mathbf{x}^a, \mathbf{x}^b),\phi(\mathbf{x}^b, \mathbf{x}^a)$ using Eqn.\ref{eq:re-domi1}, \ref{eq:re-domi2}
+%%		\STATE $dom(\mathbf{x}^a,\mathbf{x}^b)=dom(\mathbf{x}^b,\mathbf{x}^a)=1$
+%%		\FOR{$i=1$ to $m$}
+%%			\STATE $dom(\mathbf{x}^a,\mathbf{x}^b)=dom(\mathbf{x}^a,\mathbf{x}^b)\times\gamma_{i}(f_i({\bf x}^a)-f_i({\bf x}^b))$
+%%			
+%%			\STATE $dom(\mathbf{x}^b,\mathbf{x}^a)=dom(\mathbf{x}^b,\mathbf{x}^a)\times\gamma_{i}(f_i({\bf x}^b)-f_i({\bf x}^a))$
+%%		\ENDFOR
+%%		\STATE $\phi(\mathbf{x}^a,\mathbf{x}^b)=\frac{dom(\mathbf{x}^a,\mathbf{x}^b)}{dom(\mathbf{x}^a,\mathbf{x}^b)+dom(\mathbf{x}^b,\mathbf{x}^a)}$
+%%		\STATE $\phi(\mathbf{x}^b,\mathbf{x}^a)=\frac{dom(\mathbf{x}^b,\mathbf{x}^a)}{dom(\mathbf{x}^a,\mathbf{x}^b)+dom(\mathbf{x}^b,\mathbf{x}^a)}$
+%		
+%		% \STATE \textbf{return} $[\phi(\mathbf{x}_a,\mathbf{x}_b),\phi(\mathbf{x}_b,\mathbf{x}_a)]$
+		
+%	\end{algorithmic}
+%	\caption{$FuzzyDominance({\bf x}^a,{\bf x}^b,\gamma)$}
+%	
+%	\label{alg:FuzzyDominaceAlgo}
+%\end{algorithm}
+
+
+
+%%%%%%%%%%%%%Fitness Assignment%%%%%%%%%%%%%%%%
+
+%\begin{algorithm}[!h]
+%	
+%	\textbf{Input:} $R^p,\ C_t,\ \gamma$\\
+%	\textbf{Output:} Fitness values of all solutions in $C_t$
+%	
+%	\begin{algorithmic}[1]
+%		\FOR{\textbf{each} $\bf r$ in $R^p$}
+%		
+%			\FOR{$a=1$ to $\left|{X(\mathbf{r})}\right|$}					
+%
+%				\STATE $\mathbf{x}^a = a^{th}$ solution of ${X(\mathbf{r})}$
+%%				\STATE $fit(\mathbf{x}^a)=0$
+%				\STATE $fit(\textbf{x}^a)=  \sum_{b=1, b\neq a}^{b=\left|X(\mathbf{r})\right|} \phi(\textbf{x}^b,\textbf{x}^a)$\\ $[\phi(\mathbf{x}^a,\mathbf{x}^b),\phi(\mathbf{x}^b,\mathbf{x}^a)] = FD(\mathbf{x}^a,\mathbf{x}^b,\gamma)]$
+%				
+%%				\FOR{$b=a+1$ to $\left|{X(\mathbf{r})}\right|$}
+%%	
+%%					\STATE $\mathbf{x}^b = b^{th}$ solution of ${X(\mathbf{r})}$
+%%				
+%%					\STATE $[\phi(\mathbf{x}^a,\mathbf{x}^b),\phi(\mathbf{x}^b,\mathbf{x}^a)] = FD(\mathbf{x}^a,\mathbf{x}^b,\gamma)$			
+%%					\STATE $fit(\mathbf{x}^a)=fit(\mathbf{x}^a)+\phi(\mathbf{x}^b,\mathbf{x}^a)$ 					
+%%					\STATE $fit(\mathbf{x}^b)=fit(\mathbf{x}^b)+\phi(\mathbf{x}^a,\mathbf{x}^b)$ 	
+%%	
+%%				\ENDFOR
+%	
+%			\ENDFOR
+%		\ENDFOR
+%		
+%	\end{algorithmic}
+%	\caption{$FitnessAssignment(R^p,C_t,\gamma)$}
+%	
+%	\label{alg:FitAssignAlgo}
+%\end{algorithm}
+
+
+%%%%%%%%%%%%%subsection{Sampling and Selection algorithm}%%%%%%%%%%%%
+
+
+%\begin{algorithm}[!h]
+%	\textbf{Input:} $R^p, N$\\
+%	\textbf{Output:} $P_{t+1}$
+%	\begin{algorithmic}[1]
+%		\STATE Sort $R^p$: $MinMax (R^p)$
+%		\STATE $j = 0$
+%		\STATE $P_{t+1} = \emptyset$
+%		\WHILE{$\left|P_{t+1}\right|<N$}
+%		\STATE $j^{th}$ Reference Point: $\mathbf{r}^j = R^p(j)$
+%		\IF{$\left|{X(\mathbf{r}^j)}\right|>0$}
+%		\STATE $P_{t+1} = P_{t+1}\cup \{\mathbf{x}: fit(\mathbf{x})= \min_{\mathbf{x} \in {X(\mathbf{r}^j)}}{fit(\mathbf{x})} \}$
+%		\STATE ${X(\mathbf{r}^j)}={X(\mathbf{r}^j)}-\{\mathbf{x}\}$
+%		\ENDIF
+%		\STATE $j = (j+1)\mod N$
+%		\ENDWHILE
+%		
+%	\end{algorithmic}
+%	\caption{$SamplingSelection(R^p,N)$}
+%	
+%	\label{alg:EnvSelectionAlgo}
+%\end{algorithm}
+
+
+
+\subsection{Reference Point Generation}
+\label{subsec: globalReferencePoint}
+A number of existing studies~\citep{deb2014evolutionary,thetadominance7080938,
+deb2006reference,piceag,referencevectorguided,epcs} employ reference points for assigning fitness values. However, $F$-DEA uses 
+such points for clustering the solutions with a hope of maintaining both convergence and diversity. There are two important 
+considerations for generating the reference points. 
+Firstly, the reference points are to be generated in such a way so that they are uniformly distributed over the $m$-dimensional objective space. 
+%However, such a generation procedure may be problematic for an MOP with a degenerate Pareto front. The proposed $F$-DEA tries to alleviate this problem to some extent by using the information of the reference points' association with the existing solutions. 
+Secondly, the generation procedure has to be scaleable and computationally efficient. Keeping these considerations in mind, $F$-DEA uses the Das and Dennis's procedure~\citep{das1998normal} like others~\citep{deb2014evolutionary,zhang2007moea,thetadominance7080938} for generating the reference points, which are  distributed uniformly along the $m$-dimensional hyper-plane. %, $\overline{W}^T\times\overline{B}=1$. Here, $\overline{W}$ is an $m$-dimensional unit hyper-plane and $\overline{B}$ is any point on the hyper-plane. 
+The procedure generates a set of reference points, $R^g$, spanning the whole plane, each at $\delta = \frac{1}{\lambda}$ distance apart from the others. Analytically, $\left|R^g\right| = \binom{m+\lambda-1}{\lambda}$ reference points are generated where $\lambda$ denotes the number of divisions in each objective-coordinate.
+
+The main problem of this generation procedure or others~\citep{zhang2007moea} is the exponential increase of reference points with the increase of objectives. A simple technique to handle this issue is to increase the population size with respect to $\left|R^g\right|$. This in turn  will increase evolution time. As an alternative, some studies (e.g.~\citep{thetadominance7080938,deb2014evolutionary}) generate a smaller number of reference points and impose this number as a constraint on the population size. $F$-DEA, on the other hand, first generates a large number reference points and then selects a set of  preferred points based on the population size. This alleviates the problem of imposing constraint on the population size.
+
+%\subsection{Offspring Creation}
+%\label{subsec:offSpringpop}
+
+%{\bf At generation $t$, $F$-DEA creates an offspring population $Q_t$ of size $N$ using simulated binary crossover and polynomial  mutation. In doing so, it first creates a mating pool by applying \sout{binary} tournament selection on the parent population $P_t$. The crossover operator then produces an offspring from a pair of solutions of the mating pool. Finally, $F$-DEA refines offspring by applying mutation on  it.}
+
+
+\subsection{Preferred Reference Point}
+\label{subsec:prefereableReferencePoint}
+
+All the generated reference points may not be equally important with respect to the existing solutions of an evolving population. 
+The proposed $F$-DEA thus selects a set of preferred reference points, $R^p$. It first finds the 
+active reference points from $R^g/R^s$ and then applies the {\it MinMax} procedure on them  
+to choose $p$ diverse points. A reference point is called an active reference point if it maintains 
+some associations with one (or more) solution(s). The upper bound of $p$ i.e., $|R^p|$
+is $N$, the population size. The solutions of a population may reside in some (not all) regions of the 
+$m$-dimensional objective 
+space. In that case, $p$ will be less than $N$. Our algorithm
+constructs $p$ clusters using the preferred points as their centers and the solutions of $C_t$ as their members. 
+The procedure for selecting the preferred reference points and clusters is given in Algorithm~\ref{alg:prefferedReferencePoint}.
+%{\Large We associate one solution in one cluster}
+
+\subsubsection{Active Reference Point}
+\label{subsubsec: activeReferencePoint}
+
+
+As the values of the generated reference points lie in the range between 0 and 1, we adaptively 
+normalize the objective values of the solutions to measure how close a solution is with respect to a particular reference point.
+Following the adaptive normalization procedure of~\citep{deb2014evolutionary}, the $i$-th objective value, $f_i({\bf x}^a)$, of any solution ${\bf x}^a$ can be normalized as
+
+\begin{equation} \label{eq:normalizedEquation}
+	\tilde{f}_i({\bf x}^a) = \frac{f_i({\bf x}^a) - f_i^{min}({\bf x}^u)}{{\bf z}^i-f_i^{min}({\bf x}^u)} \ \ \ \forall i \in {1,2,\cdots, m}
+\end{equation}
+
+\noindent where $\tilde{f}_i({\bf x}^a)$ is the $i$-th normalized objective value of the solution ${\bf x}^a$. The symbol
+$f_i^{min}({\bf x}^u)$ refers to the minimum value of the $i$-th objective with respect to all solutions in $C_t$ and 
+the solution ${\bf x}^u$ has the minimum $i$-th objective value. The symbol ${\bf z}_i$ refers to the intercept computed 
+from the $i$-th objective axis and a $m$-dimensional linear hyper-plane.
+The  hyper-plane is constituted from $m$ solutions, where a solution ${\bf x}^h\in C_t$ makes the following achievement scalarizing function (ASF) minimum for an objective direction ${\bf w}_i$.
+
+\begin{equation} \label{eq:achievementfunction}
+	ASF({\bf x}^h, {\bf w}_i) = \max_{i=1}^{m} \frac{f({\bf x}^h)-f^{min}({\bf x}^u)}{{\bf w}_i} \ \ \ {\bf x}^h\in C_t
+\end{equation}
+
+\noindent Normalization using intercepts helps solutions to expand it's objective space.
+
+The closeness of solutions indicates their associations with the reference points. We  utilize cosine similarity measure for this purpose. The cosine similarity measure, $S(\mathbf{r^j},\tilde{\bf f}({\bf x}^a))$, between the normalized fitness vector $\tilde{\bf f}({\bf x}^a) = \tilde{f}_1({\bf x}^a), \tilde{f}_2({\bf x}^a), \ldots \tilde{f}_m({\bf x}^a)$ of any solution ${\bf x}^a$ and the $m$-dimensional $j$-th reference point ${\bf r}^j$  can be computed as
+
+\begin{equation} \label{eq:cosineSim}
+	S(\mathbf{r^j},\tilde{\bf f}({\bf x}^a))=\frac{\tilde{\bf f}({\bf x}^a) . {\bf r}^j}{|\tilde{\bf f}({\bf x}^a)||{\bf r}^j|} \ \ \  \forall j \in {1, 2, \cdots, \left|R^g\right|}
+\end{equation}
+
+\noindent %Note that both $\tilde{\bf f}({\bf x}^a)$  and ${\bf r}^j$  have $m$ components.
+As we generate a set of reference points, $R^g$, there will be $\left|R^g\right|$ similarity measures for 
+${\bf x}^a$. The largest similarity measure obtained for any of the  reference points is considered as the active reference point that maintains the highest association with ${\bf x}^a$. %Computing Active Reference Points can be also considered as the clustering of solutions based on the Reference Points so the Active Reference Points can be called as the Cluster Points. 
+While associating the solutions with the reference points, it is possible that some points may associate more than one solutions, some may associate one solution or some may associate no solution at all. %We present the procedure for computing active reference points  in Algorithm~\ref{alg:activeRefCalculation}.
+
+
+\subsubsection{MinMax Measure}
+\label{subsubsec:minMax}
+
+The objective space size increases exponentially with an increasing number of objectives. It would be beneficial if we can cover 
+the whole objective space by a reasonable number of active reference points in the least crowded manner. We devise a  procedure based on the \textit{MinMax} measure to select $p$ diverse active reference points, which $F$-DEA employs as the clusters' centers,  from the crowded ones~(Algorithm~\ref{alg:MinMaxAlgo}). 
+
+The  procedure first selects  $m$ number of  most extreme active reference points i.e., one for each objective and then incrementally selects the other points. 
+To select the other points,  it calculates the minimum Euclidean distance between the already selected points and the remaining  ones. The point with the maximum distance is selected as the next point and the minimum distance of the remaining points are updated based on the selected point. This procedure continues until all the points are selected.
+In this way, we finally obtain a sorted list of active reference points
+that are far apart from each other i.e., diverse. 
+This procedure will be effective for disconnected, degenerated and other irregular shaped geometry because we are using the reference points only where solutions exist. Thus we are effectively maintaining cluster uniformity using the same number of reference points as other approaches but we are using them where it is needed.
+%We could use other distance measure such as crowding distance. However, the crowding distances of several active reference points might be same  due to the way the Das and Dennis procedure~\citep{das1998normal} generates the reference points. It is not possible to select the diverse points based on crowding distance in such a scenario. Our {\it MinMax} measure avoids this sort of problem for which we use it  for selecting the diverse active reference points. 
+It may possible to devise other techniques as well, which can be a future research topic. %{\bf Each selected point acts as the cluster center and its associated solutions as the cluster's members.} 
+Fig.~\ref{fig:prefferedrefpointswfg2} demonstrates the process of selecting
+the preferred reference points from a set of generated reference points.
+
+ 
+
+%\input{clustermechanism}
+
+
+%In this manner we obtain a sorted order of points $r_1, r_2,\cdots, r_{i-1}, r_i, r_{i+1},\cdots,r_{n}$ such that $\min_{l=1}^{i-1} d(r_i,r_l)>\forall_{j=i+1}^{n}(\min_{l=1}^{l=i-1}d(r_j,r_l))$
+
+%Which means a point's minimum euclidean distance from the previous selected points is greater than the rest of the points. The algorithm for sorting points based on \textit{MinMax} distance is described in algorithm \ref{alg:incDistanceAlgo} 
+
+\begin{figure*}[htbp] 
+\centering    		
+	\subfigure[$|R^g|=20$, Original Solutions $|C_t|=12$]
+	{
+		\label{fig:2trueandnormalizedsolutions}
+		\includegraphics[width=1.50in]{figures/proposedalgorithm/sAlg1.eps}
+	}
+	~
+	\subfigure[Active reference points $|R^a|=9$ (marked with vector line)]
+	{
+		\label{fig:2globalreferencepointstonormalize}
+		\includegraphics[width=1.50in]{figures/proposedalgorithm/sAlg2.eps}
+	}	
+	~	
+	\subfigure[Selection of  a number of preferred reference points $(p = 6)$]
+	{
+		\label{fig:2minmaxreduction}
+		\includegraphics[width=1.50in]{figures/proposedalgorithm/sAlg3.eps}
+	}	
+\caption{Process of selecting
+the preferred reference points from a set of generated reference points}
+\label{fig:prefferedrefpointswfg2}
+\end{figure*}
+
+\subsection{Clustering}
+\label{subsec:clustering}
+The proposed algorithm constructs clusters where the preferred reference points and
+solutions (data points) are used as the clusters' centers and members, respectively.
+An important question may arise why we do not use a classical approach for clustering. The classical approach
+usually partition a set of data points into a set of meaningful sub-classes with an aim of understanding the natural grouping/structure among them.
+This is why the clusters' centers are determined from the existing data points. On the other hand, the aim of our clustering is to facilitate diversity in selecting solutions for the next generation. We thus use a set of preferred points, which are diverse and selected from a set of 
+uniformly generated reference points, as the clusters' centers. Although the generation of uniform reference points may suffer in case of an irregular Pareto front, the use of the preferred reference points as the clusters' centers alleviates this problem to some extent. 
+
+Fig.~\ref{fig:clusteringwfg2} shows the effect of preferred reference points based clustering and traditional $k$-means clustering. It is clear from the figure that $k$-means clustering with Euclidean distance measure won't work as it considers locally crowded regions to form clusters. Thus, the solutions that are Pareto dominated might be grouped together in 
+the objective space. Although $k$-means clustering with cosine measure  handles the aforementioned issue, it does not consider and maintain uniformity in clusters. In contrast, the reference points based clustering we employ in $F$-DEA maintains clusters uniformity by employing a uniformly distributed reference points as the clusters' centers.
+
+%The reference points and evolved solutions are considered in $F$-DEA as the clusters' centers and members, respectively. Existing works~(e.g.~\citep{deb2014evolutionary,thetadominance7080938,deb2006reference,piceag,referencevectorguided,epcs} generally utilize reference points in some way for assigning fitness to the solutions.
+Some previous non-fuzzy EMO algorithms~\citep{deb2014evolutionary,thetadominance7080938,coellotwoapproach} also employ clustering in 
+solving MaOPs. 
+The clustering procedure of $F$-DEA differs from the one used in~\citep{deb2014evolutionary} with two notable exceptions. 
+Firstly, $F$-DEA employs preferred reference points based clustering to provide better cluster uniformity, remove dependency on population size and handle irregular shaped Pareto fronts.
+ Secondly, it uses cosine similarity instead of Euclidean distance to find the solutions' association with the generated reference points. It is suitable  because angle between a reference point and a candidate solution remains constant irrespective of exact distance from the ideal point, which handles the scaling issue of the generated reference points.
+The  $\theta$-dominance algorithm~\citep{thetadominance7080938} also uses reference points based clustering similar 
+to~\citep{deb2014evolutionary} with an exception in normalization procedure. CEGA~\citep{coellotwoapproach}, a clustering based elitist genetic algorithm, utilizes  a bottom up hierarchical approach  in the decision variable space not in the objective space. %The basic notion of CEGA is that convergence with a poorly spread set of Pareto-optimal solutions is preferred than a well-spread set of solutions which are far from the Pareto-optimal surface. The procedure and notion of this clustering is different from the one we employ in $F$-DEA. The investigation of how different clustering approaches work in the context of $F$-DEA is outside the scope of this paper and would be the topic of a separate paper.
+%In RVEA~\citep{referencevectorguided}, reference vectors are used to decompose solutions into different sub-problems. Cosine similarity measure is used for association but unlike $F$-DEA vectors are dynamically adjusted on each generation according to the scales of the objective functions.
+%The investigation of how different clustering approaches work in the context of $F$-DEA is outside the scope of this paper and would be the topic of a separate paper.
+
+
+\begin{figure}[] 
+\centering 
+   		
+	\subfigure[Preferred Reference points based clustering]
+	{
+		\label{fig:selectedreferencepointcluster}
+		\includegraphics[width=1.4in]{figures/proposedalgorithm/sAlg4.eps}
+	}	
+	~		
+	\subfigure[$k$-means clustering with Euclidean distance measure]
+	{
+		\label{fig:selectedkmeanseuclidcluster}
+		\includegraphics[width=1.4in]{figures/proposedalgorithm/sAlg6.eps}
+	}		
+	~		
+	\subfigure[$k$-means clustering with cosine similarity measure]
+	{
+		\label{fig:selectedkmeanscosinecluster}
+		\includegraphics[width=1.4in]{figures/proposedalgorithm/sAlg7.eps}
+	}		
+	~
+	\subfigure[No clustering i.e., all solutions in one cluster]
+	{
+		\label{fig:selectedwithoutcluster}
+		\includegraphics[width=1.4in]{figures/proposedalgorithm/sAlg5.eps}
+	}		
+\caption{Solutions are grouped (rectangle box) by different clustering mechanisms. The red squared solutions are the selected solutions obtained by applying fuzzy fitness based environmental selection procedure within each cluster.}
+
+\label{fig:clusteringwfg2}
+\end{figure}
+
+
+
+\subsection{Adaptive Membership Function}
+\label{subsec:membershipFunction}
+
+
+
+In this work, we for the first time use the Sigmoid membership function~(Fig.~\ref{fig:sigmoidfunction}) into a
+fuzzy based EMO algorithm. This
+function is not only monotonically decreasing but also anti-symmetric at mean. We set its growth parameter i.e.,
+$\alpha$ in such a way so that it handles the extreme values to some extent 
+and work in support of our clustering approach.
+The Sigmoid membership function for the $i$-th objective can be defined as 
+
+\begin{equation} \label{eq:SigmoidFunction}
+	\gamma_i(f_i({\bf x}^a)-f_i({\bf x}^b))=\frac{1}{1+e^{-\alpha_i((f_i({\bf x}^a)-f_i({\bf x}^b)))}}
+\end{equation}
+
+\noindent where mean is set to zero for making the membership function anti-symmetric at that value.
+
+An MOP may or may not have an identical range of values for each objective. To capture this notion, it is better to determine $\alpha_i$ adaptively. We calculate it for each objective at every generation of evolution. The mean objective difference ($\mu_i$) and mean objective  variance ($\sigma_i^2$)
+are used to compute $\alpha_i$. We obtain $\mu_i$ and $\sigma_i^2$ using  absolute objective differences of all pairs of solutions.
+%The absolute objective difference value between a pair of solutions are same in either order. If we have $n$ solutions then the number of all pair comparisons required is $(n^2-n)/2$. Hence, for the $i$-th objective, the mean $\mu_i$ and variance $\sigma_i^2$ can be defined as  
+%
+%\vspace{5pt}
+%\begin{equation} \label{eq:meanvalue}
+%\mu_i=  \frac {2} {(n^2 - n)}  \sum_{{\substack{a = 1}}}^n \sum_{b = a+1}^n  \left|f_i({\bf x}^a) - f_i({\bf x}^b)\right| \\
+%\end{equation}
+%
+%%\noindent The variance of absolute objective differences, $\sigma_i^2$, can be defined as follows.
+%
+%\begin{eqnarray}\label{eq:varianevalue}
+%\sigma_i^2=\frac {1} {\frac{(n^2-n)}{2}-1}\sum_{{\substack{a = 1}}}^n \sum_{b = a+1}^n  \left|\left|f_i({\bf x}^a) - f_i({\bf x}^b) \right|-\mu_i\right|^2
+%\end{eqnarray} 
+The growth parameter $\alpha_i$  has been defined in such a manner so that the membership value obtained from Eq.~(\ref{eq:SigmoidFunction}) is $0.99$ at
+the point $(-\mu_i-\sigma_i)$. We compute  $\alpha_i$ as
+
+\begin{equation} \label{eq:alpha}
+	\alpha_i = \frac{\ln{p}-\ln(1-p)}{q_i}
+\end{equation}
+where $p=0.99$ and $q_i = -\mu_i - \sigma_i$. The way we define $\alpha_i$ is advantageous in three aspects.
+% As we define $\alpha_i$ is defined using mean and variance of the objective differences among all pairs of solutions, there are three advantages in such a definition. 
+\begin{itemize}
+\item Firstly, as $\alpha_i$ is defined based on mean and variance  
+instead of maximum or minimum objective difference, inappropriate normalization effect of a significantly large/small objective difference
+mentioned in Section~\ref{sec:litrev} will be minimized to some degree.
+
+\item Secondly, if the objectives are in different scales, the corresponding mean and variance of the objective differences will be different
+which in turn will produce different $\alpha_i$s i.e., different membership functions.
+
+\item Thirdly, as we cluster the solutions,  all objective differences  in the same cluster
+will be small. It ensures that most of the objective differences  will lie in the range between
+$-\mu_i-\sigma_i$ and $\mu_i+\sigma_i$. The shape of  membership function indicates that the solutions are evenly discriminable within this range. 
+\end{itemize}
+In short, the anti-symmetric property and $\alpha_i$'s definition resolve the issues of uneven discrimination ability, objective difference normalization and objective scaling.
+
+
+
+
+\begin{figure}[htbp] 
+\centering 
+	\includegraphics[width=3.3in,height=1.50in]{figures/proposedalgorithm/Nsigmoidfunctionwfg2_3.eps}	
+\caption{Sigmoid Membership Function.
+This particular case shows the position of mean objective difference value ($\mu_3$) for the third  objective of WFG2 problem obtained from the $250^{th}$ generation of a particular seed.}
+\label{fig:sigmoidfunction}
+\end{figure}
+
+
+\subsection{Fuzzy Dominance and Fitness Assignment}
+The essence of our fuzzy dominance computation and fitness assignment
+is that they are local. We utilize the solutions in the same cluster 
+for computing their dominance degrees and assigning their fitness scores. An advantage
+of this approach is that there is an opportunity to employ parallelism for 
+such computation and assignment. %Parallelism is suitable when evaluation of objective  functions is computationally expensive.
+We employ the membership function represented by Eq.~(\ref{eq:SigmoidFunction}) to compute membership
+values which in turn are used for obtaining fuzzy dominance among 
+all pairs of solutions in each cluster. We use Eqs. (\ref{eq:domi1}) and (\ref{eq:domi2})
+for obtaining fuzzy dominance.
+ %Eqs. (\ref{eq:domi1}) and (\ref{eq:domi2}) are used for computing dominance degrees. 
+%Algorithm~\ref{alg:FuzzyDominaceAlgo} shows the whole procedure of such computations.
+
+%\textbf{The relative fuzzy dominance values, $\phi({\bf x}^a, {\bf x}^b)$ and $\phi({\bf x}^b, {\bf x}^a)$, just express the two product values in the same scale and can effectively differentiate solutions in terms of overall objective wise improvement and provide selection pressure.
+%They can be expressed as}
+%
+%\begin{eqnarray}
+%\phi({\bf x}^a, {\bf x}^b)=\frac{dom({\bf x}^a, {\bf x}^b)}{dom({\bf x}^a, {\bf x}^b) + dom({\bf x}^b, {\bf x}^a)} \\
+%\phi({\bf x}^b, {\bf x}^a)=\frac{dom({\bf x}^b, {\bf x}^a)}{dom({\bf x}^a, {\bf x}^b) + dom({\bf x}^b, {\bf x}^a)}
+%\end{eqnarray}
+
+For assigning fitness to a solution of any cluster, we first compute the relative dominance degrees, $\phi$s, using Eqs. (\ref{eq:re-domi1}) and~(\ref{eq:re-domi2}). Note that the relative dominance degree of any solution $\textbf{x}^a$  in a particular cluster is considered only with respect to all other solutions in that cluster. 
+We then add all these degrees and assign it as the solution's fitness 
+as represented by~Eq.~(\ref{eq:fitassign}). 
+
+%We then add all these degrees and assign it as the solution's fitness. 
+%{\Large We can remove Algorithm 5 and 6}.
+%We present this procedure in Algorithm~\ref{alg:FitAssignAlgo}.
+
+\begin{equation} \label{eq:fitassign}
+fit(\textbf{x}^a)=  \sum_{b=1, b\neq a}^{b=n} \phi(\textbf{x}^b,\textbf{x}^a)\\
+\end{equation}
+
+\noindent Here $n$ is the number of solutions in any cluster. If a solution is least dominated by other solutions of the same
+cluster, then its fitness value will be smallest and it will be selected for the next generation.
+
+%
+%In absence of clustering, the fuzzy dominance scheme will rank all solutions based on their scalar values. 
+%It ensures convergence as the objective wise improvement with respect to all 
+%solutions are combined to get such a rank. It, however, will not ensure uniformity in selecting solutions rather
+%it introduces bias in selection. For example,  the corner solutions will be preferred for concave surfaces
+%while the center ones will be preferred for convex surfaces. Here clustering approach comes into aid for maintaining uniformity among solutions. This issue is further clarified in the following subsection.
+
+\subsection{Environmental Selection}
+As mentioned before, $F$-DEA constructs clusters using the evolved solutions as their members and the preferred reference points as their centers. 
+ The aim of our environmental selection procedure is to choose solutions for the next generation by considering not only their convergence but also their diversity. 
+To achieve these goals, $F$-DEA first sorts the clusters by applying the {\it MinMax} procedure based on the clusters' centers.
+This is done to give priority on the distant clusters. The algorithm
+then selects the solutions from the sorted clusters in a round robin fashion. For a minimization problem,  a solution having a minimum 
+dominance score compared to the remaining  ones of the same cluster is considered for selection. 
+%{\bf We use minimum dominance degree to choose solutions}.
+It means the selected solution is least dominated by the remaining ones of the same cluster. Giving preference to the distant clusters and selecting the least dominated solutions from them indicates $F$-DEA's emphasis on both diversity and convergence in its environmental selection. 
+%Algorithm~\ref{alg:EnvSelectionAlgo} outlines the selection procedure.
+
+To visualize the essence of our reference points based clustering, Fig.~\ref{fig:clusteringwfg2} shows the effect of  reference points based clustering, no clustering, $k$-means clustering with Euclidean distance and  $k$-means clustering with cosine similarity measure. It is evident from this figure that reference points based clustering is able to maintain well both convergence and diversity in selecting solutions for the next generation. In contrast, when no clustering is employed, fuzzy dominance ranks all solutions based on their scalar values and the corner solutions are selected in concave surface due to bias introduced by fuzzy dominance~(Fig.~\ref{fig:selectedwithoutcluster}). 
+Diversity maintenance of $k$-means clustering with Euclidean distance (Fig.~\ref{fig:selectedkmeanseuclidcluster}) is better than no clustering (Fig.~\ref{fig:selectedwithoutcluster}) but worse than $k$-means clustering with cosine similarity measure~(Fig.~\ref{fig:selectedkmeanscosinecluster}). To get a further insight of how much contribution we get from reference points based clustering and fuzzy dominance over Pareto dominance, detail experimentation has been conducted and presented in Section~\ref{subsec:impactofrefdominance}.
+
+%\begin{figure*}[htbp] 
+%\centering 
+%   		
+%	\subfigure[Selected solutions using Reference points based clustering]
+%	{
+%		\label{fig:selectedreferencepointcluster}
+%		\includegraphics[width=1.50in]{figures/proposedalgorithm/sAlg4.eps}
+%	}	
+%	~
+%	\subfigure[Selected solutions without using any clustering approach]
+%	{
+%		\label{fig:selectedwithoutcluster}
+%		\includegraphics[width=1.50in]{figs/AnalysisFig/writing/sAlg5.eps}
+%	}	
+%	~		
+%	\subfigure[Selected solutions using $k$-means clustering with Euclidean distance measure]
+%	{
+%		\label{fig:selectedkmeanseuclidcluster}
+%		\includegraphics[width=1.50in]{figs/AnalysisFig/writing/sAlg6.eps}
+%	}		
+%	~		
+%	\subfigure[Selected solutions using $k$-means $k$-means clustering with cosine distance measure]
+%	{
+%		\label{fig:selectedkmeanscosinecluster}
+%		\includegraphics[width=1.50in]{figs/AnalysisFig/writing/sAlg7.eps}
+%	}		
+%	
+%\caption{Selected solutions using different selection schemes}
+%\label{fig:clusteringwfg2}
+%\end{figure*}
+
+\subsection{Computational Complexity}
+
+The basic $F$-DEA algorithm contains seven lines (Algorithm~\ref{alg:completeAlgorithm}). As the first two lines are common in an evolutionary algorithm, the remaining five lines that call five procedures
+%~(Algorithms~\ref{alg:prefferedReferencePoint} - \ref{alg:EnvSelectionAlgo})
+ actually determine $F$-DEA's complexity.
+Algorithm~\ref{alg:prefferedReferencePoint} finds  $p$ preferred reference points from $\left|R^g/R^s\right|$ generated/supplied points and constructs clusters using such points. The overall computation including adaptive normalization (O($mN$)) can be performed with $max(O(mN\left|R^g\right|/\left|R^s\right|,O(mN^2))$ operations.  
+The construction of adaptive membership function using mean $\mu$ and  variance $\sigma^2$ requires O$(mN^2)$ operations.%~(Algorithm~\ref{alg:adaptivemembershipfunction})
+To calculate $\mu$ and $\sigma^2$ in a single pass, we use the Knuth's running-mean-variance approximation process~\citep{Knuth:1997:ACP:270146}. 
+Let the maximum number of solutions in a cluster is $\chi$. As there can be  $p$ different clusters, the time complexity of fitness assignment is at most $O(mp\chi^2)$, including the selection of best solutions
+%~(Algorithm~\ref{alg:EnvSelectionAlgo})
+  that requires  $max(O(mp^2),O(p\chi))$ or $O(mN^2)$ in the worst case.
+%From above analysis, it is clear that $F$-DEA will perform very fast and the only computation burden lies on the active reference points calculation. 
+Thus the overall time complexity of $F$-DEA is  $max(O(mN \left|R^g/R^s\right|),O(mN^2))$.
+%Parallelism can be used during active reference points calculation and fitness assignment procedures as each cluster is independent with respect to others. In future, we tend to configure this algorithm in a distributed system for complicated problems.
+
+\section{Experimental Studies}
+\label{sec:expstudies}
+
+We perform a series of experiments to investigate and compare the optimization capability of our algorithm. Two well known benchmark test suites   WFG~\citep{huband2006review} and 
+DTLZ~\citep{deb2005scalable} are utilized for this purpose. The WFG problems are  truly non-linear, non-separable and  multimodal, and they do not have an identical range of values for each objective~\citep{huband2006review}. These characteristics make the WFG problems more challenging than DTLZ ones. To investigate the performance on degenerate problems,
+we also include the Rectangle problem~\citep{rectangleproblem} for experimentation.
+%In this section, we present experimental details, results, and comparisons with other work.
+
+\subsection{Benchmark Problems}
+\label{subsec:testproblems}
+%The evaluation and comparison of our method is based on several benchmark problems taken from the WFG and DTLZ test suites. 
+The WFG test suite contains nine problems and we choose eight of them for experimentation. We exclude the WFG3 problem because it has a non-degenerate part~\citep{wfgdegenrate} which might create erroneous result during performance evaluation.
+To reduce experimentation burden, we choose three  (DTLZ1, DTLZ3 and DTLZ7) out of seven problems of From the DTLZ suite. We  omit
+the DTLZ2, DTLZ4 problems from comparative studies as they are relatively easy problems and the DTLZ5, DTLZ6 problems due to their ambiguity in Pareto fronts beyond 3-objective~\citep{huband2006review}.
+%Table \ref{table:problems} shows characteristics of the WFG and DTLZ problems.
+%We also choose three instances of Rectangle problem.
+%Due to page limitation, the experimental results of DTLZ and Rectangle Problems are included as supplementary Materials.
+
+The problems in WFG and DTLZ test suites can be scaled to any number of objectives and decision variables. We consider the number of objectives $m\in\{2, 3, 5, 7, 10, 12, 15, 20, 25\}$. As per recommendation from the WFG Toolkit\footnote{http://www.wfg.csse.uwa.edu.au/toolkit/README.txt}, we set the distance related parameter $l = 20$, the position related parameter $k = 4$  for $m=2$, $k = 2 \times (m-1)$ for  $3 \leq m \leq 10$, and $k = (m-1)$ for  $m >10$.  The number of decision variables, $n$, is set equal to $l + k$. We also follow the suggestions of~\citep{deb2005scalable,deb2014evolutionary} in setting $n$ and $k$ of DTLZ problems. We set $n$ equal to $m + k - 1$ for all DTLZ problems we consider in this work. We set $k = 5$ for DTLZ1, $k = 10$ for DTLZ3 and $k = 20$ for DTLZ7. %{\bf In this study, WFGX-Y refers to the problem WFGX with Y objective. The similar notation is used for the DTLZ problems.}
+
+%
+%\begin{table}[]
+%	\centering
+%	\caption{\textsc{Characteristics of different WFG and DTLZ test Problems.}}
+%	\label{table:problems}
+%	\begin{tabular}{|c|c|}
+%		\thickhline
+%		Problem & Features \\ \thickhline
+%		WFG1 & Separable, Uni-modal, Biased, Mixed, Scaled \\ \hline
+%		WFG2 & \begin{tabular}[c]{@{}c@{}}Nonseparable, Multi-modal\\ Convex, Disconnected, Scaled\end{tabular} \\ \hline
+%		%WFG3 & \begin{tabular}[c]{@{}c@{}}Nonseparable, Uni-modal\\ Linear, Degenerate, Scaled\end{tabular} \\ \hline
+%		WFG4 & Separable, Multi-modal, Concave, Scaled \\ \hline
+%		WFG5 & Separable, Deceptive, Concave, Scaled \\ \hline
+%		WFG6 & Nonseparable, Uni-modal, Concave, Scaled \\ \hline
+%		WFG7 & Separable, Uni-modal, Biased, Concave, Scaled \\ \hline
+%		WFG8 & Nonseparable, Uni-modal, Biased Concave, Scaled \\ \hline
+%		WFG9 & \begin{tabular}[c]{@{}c@{}}Nonseparable, Multi-modal, Deceptive\\  Biased, Concave, Scaled\end{tabular} \\ \hline
+%		DTLZ1 & Separable, Multi-modal, Linear \\ \hline
+%		DTLZ2 & Separable, Uni-modal, Concave \\ \hline
+%		DTLZ3 & Separable, Multi-modal, Concave \\ \hline
+%		DTLZ4 & Separable, Uni-modal, Biased, Concave \\ \hline
+%		DTLZ7 & Multi-modal, Disconnected \\ \thickhline
+%	\end{tabular}
+%\end{table}
+
+\subsection{Performance metrics}
+\label{subsec:peformancemetrics}
+
+The performance of any evolutionary  algorithm for an MOP is usually measured from two aspects: convergence and diversity. Inverse generalization distance (IGD)~\citep{zitzler2003performance} and hypervolume (HV)~\citep{zitzler1999multiobjective} are two performance metrics that capture in one scalar both convergence and diversity. 
+To calculate IGD, a well uniform sample set of true Pareto front is required. It is, however, challenging to get such a set for an increasing number of objectives~\citep{xinyao6883177}. %Deb and Jain~\citep{deb2014evolutionary} recently introduced a direct procedure for calculating IGD based on the reference points, where for each reference direction we can exactly locate the intersecting point of a known true Pareto front. 
+
+%The other performance metric HV is suitable for algorithms that search the Pareto front in the sparsely distributed objective space.
+The other performance metric HV has nicer mathematical properties  and is the only quality measure known to be strictly Pareto-compliant~\citep{zitzler2003performance}.
+These good features make HV a fair indicator for comparing different algorithms. For a non-dominated solution set $A$ obtained in final generation by an algorithm, HV is calculated with respect to a reference point {\bf r}.
+%HV of $A$ with respect to {\bf r} is the volume of region dominated by $A$ and bounded by {\bf r}.
+%
+%\begin{equation}
+%HV(A,{\bf r}) = volume(\bigcup\limits_{f\in A}[f_1,r_1]\times\cdots\times[f_m,r_m])
+%\label{eq:hv}
+%\end{equation}
+%\noindent The choice of {\bf r} is crucial in computing HV and 
+\noindent It has been known that choosing {\bf r} slightly larger than the nadir point, ${\bf z}^{nad}$, is suitable~\citep{ishibuchi2010many}. In our experiments, we set {\bf r} to $1.1{\bf z}^{nad}$, which can be analytically obtained or approximated~\citep{huband2006review}. 
+%The Pareto front of WFG4-WFG9 is part of a hyper-ellipse with radii $R_i=2\times i$ ( $i = 1, 2,\cdots,m$) and has a regular geometry~\citep{piceag,huband2006review}. It of DTLZ1-DTLZ4 also has a regular shape. As the Pareto fronts of WFG1 (mixed), WFG2 (disconnected) and DTLZ7 (disconnected) do not have a regular geometry, we obtain ${\bf z}^{nad}$ for these problems by an using an approximation procedure. 
+Following \citep{wagner2007pareto}, the points which do not dominate {\bf r} are discarded in computing HV. 
+%For the problems having Pareto fronts with differently scaled objective values, we first normalize the objective values of the points in $A$ and the reference point ${\bf r}$ using ${\bf z}^{nad}$ and ${\bf z}^{*}$ before computing HV. Here  ${\bf z}^{*}$  indicates the optimal objective value, which is $0$ for all adopted problems we consider in this study. Thus the computed HV for an $m$-objective problem would be between $0$ and $1.1^m - V_m$, where $V_m$ is hypervolume of the region enclosed by the normalized Pareto front and coordinate axes. 
+We use exact HV calculation for problems with objective less than $5$ and the Monte Carlo based fast HV approximation algorithm~\citep{bader2011hype} with $10,00,000$ sampling points for others. %The large number of sampling points is considered here to ensure accuracy in computing HV. 
+
+In experimental studies, we have used HV, IGD and visualization figures to evaluate performances of the algorithms.
+
+\subsection{ Other Algorithms in Comparison}
+
+There exists a few fuzzy dominance based EMO algorithms in the literature. FD-NSGAII~\citep{he2014fuzzy} is one such algorithm, which has been found
+better than other similar algorithms. We thus select  FD-NSGAII for comparison. We also choose NSGAIII~\citep{deb2014evolutionary} for comparison because it exhibits superior performance compared to several well-known algorithms.
+Decomposition based algorithm MOEA/D~\citep{zhang2007moea} with weighted Tchebycheff approach has been chosen as a representative of decomposition, aggregation and reference weights/points based approach. 
+%Although a new version of MOEA/D (e.g.~MOEA/D-DE~\citep{li2009multiobjective}) with differential evolution has been proposed to deal with complicated Pareto surfaces, it has been found to be shown poor performance in MaOPs~\citep{deb2014evolutionary}. 
+We choose a variant of SDE~\citep{sdealgorithm}, SPEA2+SDE, for comparison. This particular variant shows the best overall performance among its other variants~\citep{sdealgorithm}.
+%, NSGA-II+SDE, SPEA2+SDE and PESA-II+SDE~\citep{sdealgorithm}.
+Preference based co-evolutionary algorithm (PICEAg)~\citep{piceag} and HypE~\citep{bader2011hype}, an indicator based algorithm,  are also
+chosen for comparison. 
+%HypE adopts Monte Carlo simulation to approximate exact hypervolume.
+%Its core idea is that only the rankings of the solutions induced by the hypervolume indicator are important, while the actual indicator values are not.
+%All the aforementioned algorithms cover standard approaches for solving MaOPs. 
+
+%Due to fuzzy nature of our algorithm and being a reference points based algorithm we will focus our analysis with FD-NSGAII and NSGAIII for further investigation.
+
+
+
+\subsection{Parameter Setting}
+\label{subsec:parametersettings}
+
+The population size $N$ of NSGAIII cannot be arbitrarily specified, rather it has to be set equal to the number of reference points. The procedure employed for generating such points uses a division parameter $\lambda$ that determines this number. Although our algorithm uses reference points, it does not put any constraint in choosing $N$. 
+Table~\ref{table:popsize} shows $\lambda$ of NSGAIII and $F$-DEA, the weights $Z$ of MOEA/D and the number of goals $G$ for PICEAg. To make a fair comparison, the population size is set same for all competing algorithms.% (Table~\ref{table:popsize}) and it is chosen based on  NSGAIII.  
+
+All competing algorithms employ simulated binary crossover and polynomial mutation for generating offspring. The crossover and mutation probabilities are set to 1 and 1/$n$, respectively. We also use the same mutation distribution index i.e., 20 for these algorithms.  The crossover distribution index is set to 30 for $F$-DEA and NSGAIII, 20 for SDE, and 15 for HypE, MOEA/D, FD-NSGAII, and PICEAg. 
+Beside the general and common parameters, there are some specific parameters for competing algorithms. The parameter $p$ of $F$-DEA
+is set equal to $N$. The bound of reference point and the number of sampling points
+used in HypE~\citep{bader2011hype} has  been set to $200$ and $10,000$, respectively. In MOEA/D~\citep{zhang2007moea,li2009multiobjective}, the neighborhood size, $T$, is chosen $5\%$ of the population and the maximum number of population slots, $\eta_r$,  has been chosen $1\%$ of $T$. The fuzzy ranking threshold parameter $\beta$
+of FD-NSGAII~\citep{he2014fuzzy} has been set to $0.50$. In SDE~\citep{sdealgorithm}, the archive is set equal to population size, $N$.
+The number of goals $G$ used in PICEAg~\citep{piceag} is set to $m \times 100$.
+
+%	\item FD-NSGAII~\citep{he2014fuzzy}: The fuzzy ranking threshold parameter $\beta$ has been set to $0.50$. 
+%	\item MOEA/D~\citep{zhang2007moea,li2009multiobjective}: The neighborhood size, $T$, is chosen $5\%$ of the population and the maximum number of population slots, $\eta_r$,  has been chosen $1\%$ of $T$.
+%	\item FD-NSGAII~\citep{he2014fuzzy}: The fuzzy ranking threshold parameter $\beta$ has been set to $0.50$. 
+
+%\begin{enumerate}
+%	\item $F$-DEA: The division number, $\lambda$, of the Das and Dennis's procedure~\citep{das1998normal} used in $F$-DEA is shown in Table~\ref{table:popsize} and 
+%	$p$ is set equal to $N$.
+%	\item HypE~\citep{bader2011hype}: The bound of reference point  and the number of sampling points have  been set to $200$ and $10,000$, respectively.
+%	\item MOEA/D~\citep{zhang2007moea,li2009multiobjective}: The neighborhood size, $T$, is chosen $5\%$ of the population and the maximum number of population slots, $\eta_r$,  has been chosen $1\%$ of $T$.
+%	\item FD-NSGAII~\citep{he2014fuzzy}: The fuzzy ranking threshold parameter $\beta$ has been set to $0.50$. 
+%	\item NSGAIII~\citep{deb2014evolutionary}: The division number, $\lambda$, of the Das and Dennis's procedure~\citep{das1998normal} used in  NSGAIII is shown in Table~\ref{table:popsize}.
+%	\item SDE~\citep{sdealgorithm}: the archive is set equal to population size, $N$.
+%	\item PICEAg~\citep{piceag}: The number of goal $G$ is set to $m \times 100$.
+%	
+%\end{enumerate}
+
+\input{latexinput/populationsettings}
+
+Each algorithm is run independently with 20 different seeds for each problem instance. We set the termination criterion to $250$ generations for each run. The Wilcoxon rank-sum test~\citep{haynes2013wilcoxon}
+%, which is equivalent to the Mann–Whitney $U$ test~\citep{mann1947test} (MATLAB implementation\footnote{http://www.mathworks.com/help/stats/ranksum.html})
+ with a $5\%$-significance level is used while comparing two algorithms on any problem instance over 20 runs. For reducing Type-I error in pairwise testing, {\v{S}}id{\'a}k corrections~\citep{abdi2007bonferonni} are also employed.
+$F$-DEA has been implemented by the authors in~\textit{JMetal\footnote{www.jmetal.org\label{jmetal}}} framework and it's source code is available online\footnote{https://github.com/siddhartha047/FDEA}. HypE and MOEA/D  from MOEA framework\footnote{www.moeaframework.org\label{moeaframework}}. We use
+a C++ implementation\footnote{http://web.ntnu.edu.tw/~tcchiang/publications/nsga3cpp/nsga3cpp.htm\label{nsgaiiilink}} for NSGAIII. FD-NSGAII has been implemented by the authors from~\citep{he2014fuzzy} in~\textit{JMetal} framework. The source codes of SDE and PICEAg algorithms are received from the authors of the respective algorithms. The true Pareto front of the WFG problems is generated using the ~\textit{WFG-Toolkit}~\footnote{http://www.wfg.csse.uwa.edu.au/toolkit/}.
+The uniform Pareto front of DTLZ1, DTLZ3 is generated from NSGAIII implementation tools\footref{nsgaiiilink}.
+%For the DTLZ7 problems, the Pareto front is generated using \textit{MOEAFramework}~\footref{moeaframework}. 
+All algorithms were run on Intel $2.40$GHz core i5 processor with 4GB RAM. The performance evaluation and visualization codes are shared in \textit{Github}~\footnote{https://github.com/siddhartha047/MOEAevaluation-plot}.
+
+
+
+\subsection{Experiment on WFG Problems}
+This section presents evaluation and comparison of our $F$-DEA and six other algorithms on eight WFG problems with 2-, 3-, 5-, 7-, 10-,  12-, 15-,  20- and 25-objective.
+Table~\ref{table:hypewfg1} shows the average HV with standard deviation and ranks of different algorithms obtained by the Wilcoxon rank-sum test based on HVs of 20 independent runs. The lower a rank is, the better an algorithm is. 
+
+
+%For a particular problem, the performance score is a count that indicates the number of times the algorithm is significantly beaten by  the competing algorithms based the Wilcoxon rank-sum test. If there are $h$ algorithms,  the lowest score could be 0 (none found better) and the highest one could be $h-1$ (all the competing algorithms are better). The lower the score is, the better the algorithm is. The detail results of these problems are given in appendix for brevity.
+		
+\subsubsection{WFG1 Problem}
+
+The WFG1 problem has most transformation functions among the other problems of the same suite. Hence, it is difficult to maintain diversity with sufficient convergence for this problem
+% and algorithms that stress over diversity will fail to achieve convergence. 
+ $F$-DEA exhibited the best performance among all competing algorithms from 2-objective to 25-objective. 
+%PICEAg, NSGAIII, SDE were the close competitors for a lower number of objectives. %As the number of objective increases, FD-NSGAII secured the second position and exhibited better results compared to others. 
+
+\subsubsection{WFG2 Problem}
+%This is the only disconnected problem in the WFG test suite. %To achieve good performance, it is necessary for an algorithm to distribute the obtained solutions in all the disconnected regions. 
+%FD-NSGAII exhibited the worst performance on this problem with nine different objectives we considered in this work. 
+NSGAIII was the top performer in 2-objective, while PICEAg and SDE were the top two performers from 3-objective to 25-objective. $F$-DEA secured overall the third position  and showed very competitive performance with respect to average HVs achieved by the top performers.
+ 
+%\input{hypewfg2}
+
+%\subsubsection{WFG3 Problem}
+%Table~\ref{table:hypewfg3} shows the  results of different algorithms on the degenerative problem WFG3. 
+%\sout{The proposed $F$-DEA showed a very similar performance with NSGAIII for this problem with a lower number of objectives i.e., 2-objective to 7-objective, but it exhibited a superior performance for  the higher number of objectives i.e., 10-objective to 20-objective. In terms of average rank, $F$-DEA was the best performer and GDE3 was the worst performer.}
+%\input{hypewfg3}
+
+\subsubsection{WFG4 Problem}
+%The results of $F$-DEA and other algorithms for the concave multi-modal problem WFG4 are given in \sout{Table~\ref{table:hypewfg4}.}
+%\sout{$F$-DEA outperformed all other algorithms on this problem with 3-objective to $20$-objective and secured the second position on the $2$-objective. NSGAIII and MOEA/D were the closest competitors and they secured the second and third positions, respectively.} %WFG4 is a concave multi-modal problem, the convergence property of FD-NSGAII moves solution to one side in high dimension which can be also realized from the parallel coordinate plot of WFG4\_15 plot in Fig.~\ref{} and makes it the worst performer in terms of HV due to lack of diversity.  
+%\input{hypewfg4}
+
+For a smaller number of objectives, SDE and PICEAg were the two top performing algorithms while $F$-DEA showed competitive performance.  $F$-DEA, however, tied with SDE in $7$-objective and outperformed all other competing algorithms from $10$-objective to $25$-objective. %These results indicate that the performance of $F$-DEA improves as the number of objectives increases.
+
+\subsubsection{WFG5 Problem}
+%\sout{An important aspect of this problem is its deceptive nature, which challenges the ability of an algorithm to find good quality solutions. Our $F$-DEA handled the challenge successfully and outperformed all competing algorithms from 3-objective to 20-objective. For the 2-objective, NSGAIII secured the first position and $F$-DEA the second position.} %Table~\ref{table:hypewfg5} summarizes the results. 
+
+An important aspect of this problem is its deceptive nature, which challenges the ability of an algorithm to find good quality solutions. $F$-DEA handled the challenge successfully and outperformed all competing algorithms from 15-objective to 25-objective. 
+%From 7-objective to 12-objective, $F$-DEA, SDE and PICEAg were top performers. Our algorithm also showed competitive performance for $2$-, $3$- and $5$-objective. %Table~\ref{table:hypewfg5} summarizes the results. 
+
+%\input{hypewfg5}
+
+\subsubsection{WFG6 Problem}
+%Table~\ref{table:hypewfg6}} shows the performances of the competing algorithms on the non-separable reduced problem WFG6. 
+%\sout{$F$-DEA was the top performer in almost all cases of the non-separable reduced problem WFG6. There was only one instance (WFG6 with 2-objective) where our algorithm shared the top position with GDE3. In terms of average rank, our algorithm was far better with respect to the other algorithms. While the average rank of $F$-DEA  was 1.0625, MOEA/D, the best competitor of $F$-DEA for this problem, achieved an average rank of 2.5625.}
+
+$F$-DEA was the top performer from $12$-objective  to $25$-objective of the non-separable reduced problem, WFG6. 
+The proposed algorithm shared the top position with SDE and PICEAg for $2$-objective  and with PICEAg for 10-objective.
+%For other objectives, $F$-DEA showed competitive performance with the top performers.
+
+%\input{hypewfg6}
+
+\subsubsection{WFG7 Problem}
+%\sout{This is a separable unimodal problem. Similar to the previous cases, $F$-DEA showed better performance with an increasing number of objectives. More specifically, it outperformed all other algorithms on this problem with  3-objective to 20-objective. It was beaten by only NSGAIII with 2-objective and secured the second position jointly with GDE3.} %We present the results of competing algorithms in \sout{Table~\ref{table:hypewfg6}}. 
+%\input{hypewfg7}
+%Table \ref{table:hypewfg7} shows the HV of the compared algorithms on WFG7. WFG7 is a separable unimodal problem. $F$-DEA outperforms all others in $3$ to $20$ problem instances. In $2$ objective instance NSGAIII ranks $1$ and $F$-DEA, GDE3 tie with rank $2.5$. FD-NSGAII gives worst performance due to lack of diversity.
+
+This is a separable unimodal problem. $F$-DEA showed better performance with an increasing number of objectives.
+For example, it outperformed all other algorithms from 
+15-objective to 25-objective.
+% and showed competitive performance with SDE, PICEAg and NSGAIII for a smaller number of objectives.  
+
+\subsubsection{WFG8 Problem}
+%In \sout{Table \ref{table:hypewfg8}}, the performances of the competing algorithms on the non-separable problem WFG8 are presented. 
+%\sout{Our $F$-DEA outperformed the others not only in a larger number of objectives (5-objective to 20-objective) of the non-separable problem WFG8  but also in a smaller number of objectives (2-objective and 3-objective). The average rank of $F$-DEA is far better (1.0 vs 2.5) than the second best performer NSGAIII.}
+
+SDE, PICEAg and $F$-DEA were the top performing algorithms with close average HV values for this 
+non-separable problem.
+SDE was the top performer for 2-, 3- and 20-objective, PICEAg for 5- and 10-objective,
+and $F$-DEA for $15$- and $25$-objective. 
+%$F$-DEA together with SDE became the top performer for the $12$-objective and it secured the second position for the $2$-, $7$-, $10$ and $20$-objective with relatively close average HV values.
+
+%\input{hypewfg8}
+\subsubsection{WFG9 Problem}
+%\sout{Table~\ref{table:hypewfg9}} shows the results of all competing algorithms. 
+%\sout{It is clear from the table that  $F$-DEA was the best among all algorithms for this problem with 7-objective to 20-objective. For the 3-objective and 5-objective, our $F$-DEA and NSGAIII showed similar performance and they both outperformed other algorithms.  NSGAIII, however, outperformed $F$-DEA for this problem with 2-objective. }
+
+This is a non-separable deceptive problem for which NSGAIII and SDE were two top performers for
+2-, 3- and 5-objective.  As the number objective increases, the performance of $F$-DEA enhanced and shared the 
+top position with  SDE, PICEAg for the $7$- and $10$-objective. However, $F$-DEA outperformed all other algorithms from 12-objective to 25-objective.
+
+\input{latexinput/hvwfg1}
+
+Table~\ref{table:wfgsummary} summarizes the obtained results of different algorithms with respect to the number of objectives.
+We count the number of times $F$-DEA is better, worse or equal than any competing algorithm based on the Wilcoxon rank-sum test. For better 
+understanding, we present the results into three groups: 2-objective to 3-objective, 5-objective to 7-objective and 10-objective to 25-objective. For 2-objective and 3-objective,
+ $F$-DEA was outperformed by SDE and PICEAg, but it was found better than MOEA/D, HypE, FD-NSGAII and NSGAIII. SDE and PICEAg were also the top performing algorithms for 5-objective to 
+ 7-objective, while $F$-DEA secured the overall third position and outperformed others. This scenario is totally different for a higher number of objectives i.e., 10-objective to 25-objective for which $F$-DEA was found better than all competing algorithms. 
+
+%We present the attainment surface plots and parallel coordinate plots of non-dominated solutions obtained in the final generation. For brevity we have included plots for five competing algorithms and plots for HypE and MOEA/D are included in the supplementary materials.\textbf{In terms of HV, the solutions were taken from the 10th run of the sorted 20 independent runs.} For brevity, we consider the WFG9 problem with 3- and 15-objective for attainment surface plots and parallel coordinate plots, respectively. Note that the deceptive, biased, non-separable, and multi-modal nature make WFG9 a very difficult problem. 
+%To visualize the achieved convergence and diversity more clearly, the obtained non-dominated solutions of a particular algorithm are divided into two categories. One category contains the solutions that are at most $d$-distance apart from the normalized surface while the other one contains the solutions that are more than $d$-distance apart. 
+
+To investigate the performances of different algorithms visually, we present the attainment surface plots and parallel coordinate plots of competing algorithms on 15- objective of WFG9 problem. For brevity, we present only the parallel coordinate plots of five competing algorithms. %The parallel coordinate plots of remaining algorithms and attainment surface plots of all algorithm are provided in supplementary materials~(Figs. 2 and 1 of supplementary material).
+We use the non-dominated solutions obtained in the final generation for obtaining plots. In terms of HV, the solutions were taken from the $10$th run of the sorted $20$ independent runs.
+%The deceptive, biased, non-separable, and multi-modal natures make WFG9 a very difficult problem. 
+To visualize the achieved convergence and diversity more clearly, the obtained non-dominated solutions of a particular algorithm are divided into two categories: converged and non-converged. The solutions that are at most $d$-distance apart from the normalized surface are considered as converged and remaining are considered as non-converged.
+
+
+%We present the parallel coordinate plots of non-dominated solutions obtained in the final generation of a single run. For brevity, we include here plots for five competing algorithms and present the plots for HypE and MOEA/D in the supplementary materials. In terms of HV, the solutions were taken from the $10$th run of the sorted $20$ independent runs. We consider the WFG9 problem with 3-and 15-objective for attainment surface plots and parallel coordinate plots, respectively. Note that the deceptive, biased, non-separable, and multi-modal natures make WFG9 a very difficult problem. To visualize the achieved convergence and diversity more clearly, the obtained non-dominated solutions of a particular algorithm are divided into two categories: converged and non-converged. The solutions that are at most $d$-distance apart from the normalized surface are considered as converged. Otherwise, they are considered as non-converged.
+
+%Figure~\ref{fig:WFG9_3D} shows the attainment surfaces of five different algorithms on the WFG9 problem with $3$-objective. We here call an obtained non-dominated solution as the converged one if it is at most $d = 0.03$ distance apart from the points of normalized Pareto surface. Otherwise, it is called as the non-converged solution.
+%It can be seen from Fig.~\ref{fig:our9_3} that both the converged solutions~(red colored diamond points) and the non-converged ones~(gray colored circle points) of $F$-DEA's are almost uniformly distributed in the entire Pareto surface. 
+%Although the obtained solutions of NSGAIII are evenly distributed, but a few of them converges~(Fig.~\ref{fig:nsgaiii9_3}). 
+%One reason is that while $F$-DEA employ reference point for constructing diverse clusters,  
+%NSGAIII uses the reference point directly for maintaining diversity among the solutions. 
+%However, some experimental observations~\citep{ishibuchi2008evolutionary,wagner2007pareto,purshouse2007evolutionary} have indicated that favoring too much diversity has
+%the potential detrimental effect on the convergence of EMO algorithms for MaOPs. 
+%For SDE, most of the obtained solutions  were converged~(Fig.~\ref{fig:sde9_3}), but they were not evenly diverse like those of   NSGAIII and $F$-DEA. PICEAg maintained good 
+%diversity without convergence~(Fig.~\ref{fig:piceag9_3}).
+%It is evident from Fig.~\ref{fig:zhenan9_3} that the solutions of FD-NSGAII, whether they converged or non-converged, cover only a very small portion of the normalized Pareto surface. 
+%
+%The situation, however, changes as the number of objectives increases. 
+%For example, 
+Fig.~\ref{fig:WFG9_15D} shows the parallel  
+coordinate plots of the five algorithms for the WFG9 problem with 15-objective. 
+In terms of the number of converged solutions, FD-NSGAII~\ref{fig:zhenan9_15}, $F$-DEA~\ref{fig:our9_15} and PICEAg~\ref{fig:piceag9_15} secured the first, 
+second and third positions, respectively. However, only $F$-DEA was able to maintain good diversity 
+which could be attributed to the variations in  the objective values of the solutions. While FD-NSGAII failed miserably to maintain diversity, PICEAg was able to maintain diversity moderately. 
+Although most of the solutions from SDE (Fig.~\ref{fig:sde9_15}), NSGAIII (Fig.~\ref{fig:nsgaiii9_15}) were not converged but they maintained better diversity  than FD-NSGAII and PICEAg.
+The bottom figures of five competing algorithms show the zoomed version of all the obtained non-dominated solutions. It is clear from these figures that $F$-DEA is better in terms of simultaneous minimization of all the objectives  while maintaining diversity. 
+%For example, $F$-DEA minimized all the objectives, but FD-NSGAII did not able to minimize the 13th to 15th objective.
+
+%\input{WFG93}
+\input{latexinput/wfgcount}
+\input{latexinput/WFG915D}
+
+
+\subsection{Experiments on DTLZ Problems}
+We apply $F$-DEA and other competing algorithms on three DTLZ problems, DTLZ1, DTLZ3 and DTLZ7. These problems are complex compared to other DTLZ problems.  DTLZ1 is difficult to converge, DTLZ3 has a large number of local fronts and DTLZ7 is a disconnected problem. 
+We use HV and IGD for comparison. But as DTLZ7 is a disconnected problem, it is difficult to get the reliable estimation of IGD value for this case. Hence, we did not employ IGD  for DTLZ7.  %The experimental results are presented as supplementary material, which show that the proposed $F$-DEA is able to outperform other competing algorithms in DTLZ1 and DTLZ7 in higher number of objectives~(Tables I-IV of supplementary material). For the remaining problems $F$-DEA showed competitive performance. The parallel coordinate plots~(Fig. 3 of supplementary material), also presented as supplementary material, show that the proposed algorithm is able to optimize each objective within limit successfully.
+
+%\subsection{Experiment on DTLZ Problems}
+%We apply $F$-DEA and other competing algorithms on three DTLZ problems, DTLZ1, DTLZ3 and DTLZ7. %These problems have been used in many previous studies and are different from the WFG ones in the sense that they have an identical range of values for each objective. 
+%Hypervolume is used as before to compare
+%the performances of different algorithms on the three DTLZ problems. We also employ here IGD values for comparing the performances of
+%different algorithms on  DTLZ1 and DTLZ3 problems. As DTLZ7 is a disconnected problem, it is difficult to get reliable estimation of IGD value for this case. Hence, we did not employ IGD  for DTLZ7. 
+
+Tables~\ref{table:dtlzhv} and ~\ref{table:dtlzIGD} show the performances of different algorithms on DTLZ1, DTLZ3 and DTLZ7 problems in terms of HV and IGD, respectively. %DTLZ7 is a disconnected problem, it is difficult to get reliable estimation of IGD value for this case. Hence, we did not employ IGD  for DTLZ7. 
+
+%Tables~\ref{table:dtlzhvsummary} and ~\ref{table:dtlzigdsummary}, respectively, show the number of times $F$-DEA is found better, worse or equal than any competing algorithm based on the Wilcoxon rank-sum test applied on the HV and IGD values of the DTLZ problems. 
+%
+%Fig.~\ref{fig:dtlz710figure} shows the parallel coordinate plot of the competing algorithms for the DTLZ7 problem with 10-objective.
+
+%The performances of different algorithms on each DTLZ problem is discussed as follows. 
+
+\subsubsection{DTLZ1 Problem}
+
+Although DTLZ1 has a simple linear Pareto Front $(\sum_{i=1}^{m} f_i=0.5)$, a large number of local optima~(= $11^5-1$)   
+makes it difficult for an algorithm to converge into the hyper-plane. In terms of average HV and IGD,
+NSGAIII was better than all other competing algorithms for a smaller number of objectives.
+%$F$-DEA, MOEA/D, PICEAg, SDE were able to solve this problem with competitive performance.  
+$F$-DEA, however, outperformed others as the number of objectives increased.
+%For example, in terms of HV, $F$-DEA was found better than all competing algorithms from 10-objective to 25-objective. In terms of IGD, it beat all others in 7-, 10-, 15- and 20-objective and secured the second position after SDE in 12- and 25-objective.
+
+
+%\subsubsection{DTLZ2 Problem}
+%This is relatively an easy  problem with concave geometrical shape $(\sum_{i=1}^{m} f^2_i=1)$.
+%%All of the competing algorithms were able to solve it.
+%In terms of IGD, NSGAIII was the top performer from $2$-objective to $7$-objective.  
+%SDE secured the top position based on HV for all but 2-objective.
+%It also secured the top position in terms of IGD obtained for $10$-objective to $25$-objective. 
+%The performances of $F$-DEA were close to the top performers both with respect to IGD and HV.  
+%In terms of IGD for the $10$-objective to $25$-objective, the proposed algorithm
+%secured the second position after SDE.
+
+\subsubsection{DTLZ3 Problem}
+%This problem has the same shape as DTLZ2 but it has a large number of local Pareto fronts parallel to the global one.
+
+This problem has concave geometrical shape $(\sum_{i=1}^{m} f^2_i=1)$ with a large number of local Pareto fronts parallel to the global one. This property makes it a very challenging problem. SDE and MOEA/D were top performers on this problem. %Not all but $F$-DEA, SDE, MOEA/D, and PICEAg were able to solve this problem for a larger number of objectives, which could be seen by their non-zero HV values. 
+In terms of HV and IGD, $F$-DEA was one of  the best performers in 3-objective 
+and secured the second position after SDE for the 25-objective. 
+It shared the second position with MOEA/D in many cases while compared with respect to HV and for a larger number of objectives.  
+MOEA/D, however, outperformed $F$-DEA in terms of IGD values, which caused $F$-DEA to achieve overall the third position.
+
+
+%\subsubsection{DTLZ4 Problem}
+%Although DTLZ4 has same geometrical shape as DTLZ2 and DTLZ3, it challenges the ability of an algorithm to maintain diversity in the objective space by introducing variable density of solutions along the Pareto front. 
+%The IGD values showed that $F$-DEA secured the first position
+%in the 20-objective and the second position in rest of the objectives. 
+%NSGAIII showed the best performance for a smaller number of 
+%objectives and SDE for a larger ones. In terms of HV, $F$-DEA secured the third position after
+%SDE and NSGAIII. %From the large values of IGD and small ones of HV, it is clear that both FD-NSGAII and HypE failed to maintain diversity.
+
+\subsubsection{DTLZ7 Problem}
+This problem has disconnected regions which make it interesting and challenging. In terms of HV, 
+$F$-DEA exhibited superior performance for a larger number of objectives while SDE showed superior performance for a smaller ones~(Table~\ref{table:dtlzhv}). For example, 
+SDE and MOEA/D jointly secured the first position  for 2-objective and the former one independently secured the first position from the 3-objective to 7-objective. NSGAIII obtained the second position for 3-objective 
+and $F$-DEA secured the second position for  5-objective 
+and 7-objective. For a larger number of objectives (from 10-objective to 25-objective), 
+$F$-DEA was the best and PICEAg was next to it.
+Most of the algorithms did not able to converge within the reference point bound  which constituted their small HV values for a larger
+number of objectives.
+
+
+Tables~\ref{table:dtlzhvsummary} and ~\ref{table:dtlzigdsummary}, respectively, show the number of times $F$-DEA is found better, worse or equal than any competing algorithm based on the Wilcoxon rank-sum test applied on the HV and IGD values of the DTLZ problems. 
+In terms of HV and IGD, the three algorithms SDE, NSGAIII, PICEAg and $F$-DEA showed a very similar performance  for a smaller number of objectives, 2-objective to 7-objective. However, for higher number of objectives $F$-DEA outperforms others in DTLZ1, DTLZ7 problems and shows competitive performance with SDE and MOEA/D at DTLZ3 problem. %These observations were almost true when we compared $F$-DEA with others in terms of both HV and IGD.
+
+%Fig.~\ref{fig:dtlz710figure} shows the parallel coordinate plot of the competing algorithms for the DTLZ7 problem with 10-objective. The upper bound of the last objective for this problem is $2\times m$ or $f_{10}\le 20$. It can be seen from the figure that $F$-DEA  was able to maintain diversity and convergence together within the Pareto optimal front. SDE~(Fig.~\ref{fig:dtlz710sdefigure}) and HypE~(Fig.~\ref{fig:dtlz710hypefigure}) exhibited similar convergence performance  but  $F$-DEA outperformed both of them in terms of diversity. PICEAg~(Fig.~\ref{fig:dtlz710piceagfigure}) converged in the first nine objective but few solutions converge on $10$th objective.
+
+Fig.~\ref{fig:dtlz710figure} shows the parallel coordinate plot of the competing algorithms for the DTLZ7 problem with 10-objective.
+The upper bound of the last objective for this problem is $2\times m$ or $f_{10}\le 20$. 
+It can be seen from the figure that $F$-DEA  was able to maintain diversity and convergence together within the Pareto optimal front. SDE~(Fig.~\ref{fig:dtlz710sdefigure}) maintained diversity and convergence well but $F$-DEA outperforms SDE by having more objective value variation in the first 9 objectives. 
+PICEAg~(Fig.~\ref{fig:dtlz710piceagfigure}) converged in the first nine objective but few solutions converge on $10$-th objective. Similarly, NSGAIII~(Fig.~\ref{fig:dtlz710nsgaiiifigure}) also converges in the first $9$ objectives but only few converges in the $10$-th objective.
+FD-NSGAII~(Fig.~\ref{fig:dtlz710zhenanfigure}) converged solutions into a region as expected.
+
+
+
+%
+%It is clear from this table that in most of the cases $F$-DEA exhibits better performance on the DTLZ problems with a higher number of objectives. For example, $F$-DEA outperformed all other algorithms for the DTLZ2 problem with 10-objective to 20-objective. It also exhibited better performance on the disconnected problem DTLZ7 with 5-objective to 20-objective. Diversity maintenance is very much crucial for solving disconnected problem. The performance of our algorithm on the 
+%DTLZ7 problem indicates the algorithm's better diversity maintenance ability. 
+%In terms of average rank, $F$-DEA outperformed all other algorithms on the DTLZ1, DTLZ2, and DTLZ7, but it showed inferior performance compared to  MOEA/D and NSGAIII  for the DTLZ3 and DTLZ4 problems, respectively.   
+
+\input{latexinput/dtlz7figures}
+\input{latexinput/dtlzhv1}
+\input{latexinput/dtlzigd1}
+\input{latexinput/dtlzhvcount}
+\input{latexinput/dtlzigdcount}
+
+
+%\subsection{Experiments on Rectangle Problems}
+%All competing algorithms including $F$-DEA have been tested on three instances of degenerate Rectangle problem~\citep{rectangleproblem}. %The rectangle problem is a $4$-objective degenerate problem with two decision variables. 
+%The three instances are with same 4-objective lines ($f_1=0, f_1=100, f_2=0$ and $f_2=100$) and their only difference is in the 2-variable search space (decision space) range. Following~\citep{rectangleproblem}, ranges are defined as $[x_1, x_2]\in [{-20}, 120]$, $[x_1, x_2]\in[{-10000}, 10000]$ and $[x_1, x_2]\in [{-10^{12}}, 10^{12}]$ for instance I, II and III respectively.
+%The true Pareto front of this problem is a line in $4$-dimensional objective space. But the interesting properties of it are that the degenerate Pareto optimal solutions lie in a rectangle of the two-variable decision space and have similar images in the objective space.
+%%The three instances were taken based on a small to a large ranges of the two decision variables. 
+%During experiments, division parameter, $\lambda$, of NSGAIII's and $F$-DEA's were set $10$ and $60$, respectively. The number of weights used in MOEA/D was chosen as $28800$, while the number of goals for PICEAg was $400$. The population size was set to $288$.
+%
+%The visual plots presented in supplementary material~(Figs. 4, 5 and 6 of supplementary material) show that $F$-DEA is able to solve rectangle problems effectively. Specially, in case of a very large search space, $F$-DEA was able to outperform all competing algorithms. In the rectangle problem, any solution inside the parallel objectives' line can be only Pareto dominated by a solution in the same line whereas the solutions in corner are dominated by those reside in the broader region~\citep{rectangleproblem}. This property creates difficulty for Pareto
+%based algorithm to converge. As the primary selection criterion of NSGAIII and PICEAg is based on Pareto, it makes problem for them reaching to the Pareto optimal front and
+%solutions are distributed in crisscross~(Figs. 5 and 6 of supplementary material). Our F-DEA applied fuzzy-fitness criterion in its selection mechanism which alleviates the problem faced by Pareto dominance.
+
+\subsection{Discussion}
+
+The results presented in the previous sections and supplementary material give an idea about the performances of $F$-DEA with respect to different competing algorithms. This section briefly explains the reasons behind such performances.
+
+$F$-DEA maintains cluster uniformity based on preferred reference points. If a parent population lies in crowded regions
+and any offspring solution lies in a different region, then the solution will form a new cluster and  $F$-DEA will
+select it for the next generation. %The next generation clusters will thus have a broader span. 
+This property  helps $F$-DEA expanding its search region whenever possible. And this is beneficial for
+a deceptive problem containing large-size hill and disconnected problems having isolated regions.
+However, this property is not beneficial for a degenerate problem. As the isolated solution increase the  search region, it will take some generations to converge. 
+%This can be seen for the Rectangle Problem where few solutions reside outside the optimal region~(Fig.~4(a) of supplementary material). 
+The fuzzy dominance with adaptive membership functions can optimize different objectives well in case of a large number of objectives~(Fig.~\ref{fig:WFG9_15D}), and the bias induced for that was mitigated from the cluster uniformity.
+%The fitness assignment procedure can maintain extreme point well in $F$-DEA which helps to retain cluster uniformity for the next generation.
+
+The poor performance of FD-NSGAII~\citep{he2012new} was due to lack of diversity among solutions~(\ref{fig:zhenan9_15} and \ref{fig:dtlz710zhenanfigure}).
+%The diversity maintenance ability of $F$-DEA in contrast was able to maintain diversity well.
+NSGAIII~\citep{deb2014evolutionary} emphasizes on solutions that are non-dominated and close to reference line. When the number of objectives is large,
+the Pareto-dominance relied on by NSGAIII lacks enough selection pressure to push the population towards Pareto front.
+In a sense, NSGA-III stresses diversity more than convergence~\citep{thetadominance7080938}. %The experimental results WFG and DTLZ problems with a large number of objectives confirms this fact.
+Our $F$-DEA uses fuzzy dominance that is able to maintain good selection pressure in high dimensional objective space. As the number of objectives increases fuzzy dominance becomes more effective to differentiating which solutions are better. Also the preferred reference points based clustering method promotes diversity using those reference points where solution exists rather than entire high dimensional objective space.
+ 
+SDE~\citep{sdealgorithm} performs relatively well in the DTLZ problem suite than the WFG one. The reason most likely is the normalized nature of 
+the former problem suite. 
+The performance of $F$-DEA for the WFG problem signifies that the proposed algorithm was able to handle the scaling 
+issue well due to the use of scale independent adaptive fuzzy membership function.
+
+The co-evolutionary algorithm PICEAg is goal oriented and Pareto based algorithm. The maintenance of an increasing number of goal vectors
+by this algorithm enhances the comparability among solutions in a high dimensional objective space. 
+The inherent tendency to maintain diversity sometimes responsible for reducing selection pressure.
+This can be understood by looking the results of the algorithm for the WFG1 problem for which it performed worse
+compared to its performance on other problems~(Table~\ref{table:hypewfg1}).
+
+The obtained solutions of MOEA/D in high dimension might achieve good aggregation values but far away from the corresponding weight vector. This property makes harder for MOEA/D to maintain diversity for problems with a large number of objectives. 
+HypE failed to maintain diversity in some cases and pushed the solutions into the corner of the Pareto front.
+
+The test problems in the WFG suite are far more difficult to solve and hard to maintain diversity. It is  because the WFG problems have more 
+transformation functions and they have different ranges for different objectives. 
+The proposed algorithm $F$-DEA was able to outperform competing algorithms on these problems
+with a larger number of objectives.
+From the results of the DTLZ suite, we  see that for a larger number of objectives, $F$-DEA was able to solve difficult 
+to converge DTLZ1 and disconnected DTLZ7 problems better than others. 
+
+%Also $F$-DEA was able to solve other problems and showed competitive performances. Even on degenerate problem, $F$-DEA was able to maintain diversity and convergence with the capability of handling huge search space. Therefore algorithm $F$-DEA shows competitive performance with state of the art optimizer in MaOPs.
+
+
+%\input{dtlzsummarytable}
+%\input{dtlzobjectivewiseperformancefigure}
+%\input{problemwiseperformancefigure}
+
+
+
+%The results presented in the Tables~\ref{table:hypedtlz1} - \ref{table:hypedtlz7} give an idea about the performance of different competing algorithms. To view these results in a concise form, we summarize the results  in 
+%Table~\ref{table:dtlzsummary} shows the number of times $F$-DEA is found better, worse or equal than any competing algorithm on the DTLZ problems based on the Wilcoxon Rank Sum Test. It is clear from this table that NSGAIII  is the best performer on the DTLZ problems with 2- and 3-objective, while $F$-DEA is the best performer on the DTLZ problems with 5-objective to 20-objective. 
+%In terms of average rank, NSGAIII  is found better than all competing algorithms from 2-objective to 5-objective, but $F$-DEA is found better from 10-objective to 20-objective. For the 7-objective, both NSGAIII and $F$-DEA showed similar performance. One noticeable feature of $F$-DEA is that its performances goes up as the number of objective increases. This is, however, not observed in other algorithms.
+
+%To compare the algorithms' performance on different problems with respect to a lower and higher and number of objectives, Fig.~\ref{fig:problemwiseperformance}
+%shows the average performance scores of different algorithms. 
+%For a given problem, the performance score of a particular algorithm is the count that determines how many different algorithms beat the algorithm based the Wilcoxon rank-sum test. If there are $h$ algorithms, the lowest score could be 0 (no competing algorithm is better)  and the highest one could be $h-1$ (all the competing algorithms are better). Hence, the smaller a score is, the better an algorithm is.
+%It is clear from Fig.~\ref{fig:problemwiseperformance}(b) that $F$-DEA is the best performer in most of the problems with 5-objective to 20-objective.
+%For example, $F$-DEA outperformed all competing algorithms on eight out of nine  WFG problems and three out of five DTLZ problems.  
+%FD-NSGAII was the best for one WFG problem and $F$-DEA was next to it. NSGAIII narrowly beat $F$-DEA in one DTLZ problem. In  case of problems with 2- and 3-objective,  $F$-DEA is not the best choice, especially for the normalized problems DTLZ.
+
+\subsection{Effect of Reference Point Based Clustering and Fuzzy Dominance}
+\label{subsec:impactofrefdominance}
+To investigate how much benefit we get from reference point based clustering and 
+%To investigate the impact of reference points based clustering and  
+fuzzy dominance over Pareto dominance, we evaluate two variants, $F$-DEA$^{*}$ and $F$-DEA$^{\#}$, of basic $F$-DEA on DTLZ1 and DTLZ3 problems with the usual settings. While $F$-DEA$^{*}$ does not employ  reference points based clustering,  $F$-DEA$^{\#}$ employs Pareto-dominance based fitness assignment instead of fuzzy dominance based fitness assignment. Tables~\ref{table:dtlzigdvariant} shows the comparative performances of $F$-DEA$^{*}$ and $F$-DEA$^{\#}$ against basic $F$-DEA in terms of HV and IGD. For brevity, we consider  DTLZ1 and DTLZ3 problems with 7-, 10- and 15-objective.
+
+
+It is clear from Tables~\ref{table:dtlzigdvariant} that the basic $F$-DEA outperforms both $F$-DEA$^{*}$ and $F$-DEA$^{\#}$ significantly in all problem instances. 
+The large IGD values and small (in fact zero) HV values of $F$-DEA$^{\#}$ in DTLZ1 and DTLZ3 suggest that the Pareto based selection failed to create necessary selection pressure on hard to converge problems. $F$-DEA$^{*}$, on the other hand, convergences into a part of Pareto front due to the bias created from fuzzy dominance. The IGD and HV values of $F$-DEA$^{*}$ are better than $F$-DEA$^{\#}$ as no solution obtained by $F$-DEA$^{\#}$ converges into Pareto front.
+%The results presented in Tables~\ref{table:dtlzigdvariant} and~\ref{table:dtlzhvvariant} indicate the essences of using fuzzy dominance in conjunction with  reference points based clustering to solve MaOPs.
+
+Fig.\ref{fig:dtlz110figure} shows the non-dominated solutions obtained by
+$F$-DEA$^{*}$, $F$-DEA$^{\#}$ and  basic $F$-DEA for DTLZ1 problem with
+in 10-objective. Basic $F$-DEA achieved good convergence (overall objective range [$0-0.5$]) while maintaining good diversity (Fig.~\ref{fig:dtlz110fdeafigure}). In contrast, $F$-DEA$^{\#}$ (Fig.~\ref{fig:dtlz110fdeahashfigure}) maintained diversity due to reference points based clustering but failed to converge (overall objective range [$0-500$]) because of Pareto based selection.
+ $F$-DEA$^{*}$ (Fig.~\ref{fig:dtlz110fdeastarfigure}) converged to a part of Pareto front but severely lacked diversity. 
+
+The performances of two variants $F$-DEA$^{*}$ and $F$-DEA$^{\#}$ indicate the importance of using clustering and fuzzy dominance based selection in solving MaOPs. The fuzzy based selection alone cannot maintain diversity and clustering does not work with Pareto based approach due to its lack of comparability for a large number of objective. This is why $F$-DEA harvests the benefits from these two techniques, clustering and fuzzy dominance, and compliments each others' weakness.
+
+
+\input{latexinput/dtlz1comparison}
+\input{latexinput/dtlzIGDvariant}
+%\input{dtlzhvvariant}
+%\input{wfghvvariant}
+
+
+
+\subsection{Parameter Sensitivity}
+\label{subsec:parametersensitvity}
+
+In the absence of supplied reference points, $F$-DEA employs the Das and Dennis~\citep{das1998normal} procedure for generating such points. This procedure requires a parameter $\lambda$, the number of division in an objective. 
+It is worth mentioning that  $\lambda$ is necessary if any evolutionary algorithm (see, for example, ~\citep{deb2014evolutionary}) employs this procedure. 
+The aim of this section is to show why we select $p$ (=$N$, the population size) preferred points from a large number of generated points.
+
+%Having parameters is a less desired property for any algorithm because they require tuning for different scenarios, which is inconvenient for a decision maker. However,  $\lambda$ and $p$ used in $F$-DEA give the necessary flexibility to the decision maker's desires. One can ignore $\lambda$ if the supplied reference points to the preferred directions are available. If the decision maker does not want to (or cannot) supply   reference points due to lack of domain knowledge, $\lambda$ works in such a case. 
+%The other parameter $p$  gives  freedom to control over convergence and diversity. 
+Trivially, an evolutionary algorithm maintains diversity and convergence by its own way, where the decision maker has no control. 
+In $F$-DEA, the decision maker can control them using $p$. Furthermore, $\lambda$ and $\ p$ together remove the constraint to population size for any number of objectives unlike NSGAIII~\citep{deb2014evolutionary,thetadominance7080938} in which the population size is bounded by $\lambda$ and not flexible for an arbitrary number of objectives.
+
+Fig.~\ref{fig:parametersensitivty} shows impact of $\lambda$ and $p$ on the GD, IGD and HV performances of DTLZ2 problem with $10$-objective. The experiments were conducted with the usual parameter settings but varying $\lambda$ and $p$. For convenience, $p$ was changed in such a way that the expected number of solutions in each cluster, $\chi$, becomes $2, 3, \cdots,10$.
+
+We can see as $\lambda$ increases so does overall HV (Fig.~\ref{fig:dtlz210hvparameter}) and reduces GD (Fig.~\ref{fig:dtlz210gdparameter}) and IGD (Fig.~\ref{fig:dtlz210igdparameter}) up to a certain level. Increasing $\lambda$ increases the number of generated reference points exponentially. A small number of reference points do not cover the entire objective space. Generating a large number of reference points maintains better cluster uniformity which in turn improves overall performance. But if we continue increasing reference points then after a certain $\lambda$, the clusters' representative points will be nearly same as before and performance will be clipped. It is also expensive to generate a huge number of reference points. Hence, a reasonable number of  reference points should be used. By inspecting the performance on DTLZ2, it is clear that  after $\lambda=9$ the performance doesn't improve increasing $\lambda$~(Fig.~\ref{fig:parametersensitivty}). It is to be noted that HV for $\lambda=3$ is greater than the HV value for $\lambda=4$ and this behavior is problem dependent. Therefore it is sufficient to use $\lambda = 9$ for $10$-objective problem. 
+
+
+As $p$ decreases, the number of clusters decreases and the expected number of solutions, $\chi$, in a cluster increases for a fixed-size combined population, $\left|C_t\right| = 2N$ (e.g. for $p = N$, $\chi=2N/N=2$ and for $p = \frac{N}{2}$, $\chi = 2N/\frac{N}{2} = 4$).
+The fuzzy dominance relation within a cluster promotes faster convergence. By decreasing $p$, the solutions achieve faster convergence while losing some diversity. A closer inspection of Fig.~\ref{fig:dtlz210gdparameter} reveals  that as $p$ decreases (i.e., increasing $\chi$), the overall GD value decreases i.e., convergence increases. The overall performance of HV decreases~(Fig.~\ref{fig:dtlz210hvparameter}) and IGD value increases~(Fig.~\ref{fig:dtlz210igdparameter}), which indicates reduction in diversity. Therefore $p=N$ or $\chi=2$ is  preferable as it works as the best compromise between convergence and diversity.
+We might require more converged optimal solutions compromising some diversity in some real-world applications. It is possible to achieve this goal by decreasing $p$. An opposite scenario i.e., obtaining more diverse solutions can also be achieved by increasing $p$.
+
+%By increasing $p$, the preferable cluster size, we get more diverse solutions and by decreasing $p$ value we get faster convergence. Combining convergence and diversity sensitivity together in adaptive manner will also work. For example giving convergence a boost at the beginning of generation and diversity later (although in this case domain knowledge will be required for generating well distributed random solutions at the start) by starting with smaller $p$ and increment $p$ later. We left this as a further studies for future work.
+
+%\input{parameterplot}
+%\input{parameterSensitivity}
+\input{latexinput/parameterSensitivityDtlz}
+
+
+\section{Conclusion and Future Work}
+\label{sec:conclusion}
+
+Evolutionary algorithms can provide several candidate solutions in a single run, which make them popular to solve many practical problems including MaOPs. However, the loss of selection pressure is a challenging issue for such algorithms while solving MaOPs. 
+In this paper, we have incorporated fuzzy-dominance and reference points in the environmental selection mechanism of the proposed  
+$F$-DEA with an aim of improving selection pressure. The introduction of reference point in conjunction of fuzzy-dominance not only helps in maintaining diversity of the evolved solutions but also convergence.
+
+$F$-DEA has been extensively evaluated and compared using eight WFG and three DTLZ problems having 2- to 25-objectives. %It has also been evaluated and compared to three instances of Rectangle problem.
+The simulation results reveal that $F$-DEA in general performs better than other algorithms on complex problems with an increasing number of objectives. 
+It has also been found that $F$-DEA can balance between the conflicting goal of convergence and diversity well in comparison with other algorithms, especially for complex problems.
+
+In its current implementation, the reference point generation procedure~\citep{das1998normal} used in $F$-DEA has one user-specified parameter, which was set after some preliminary experiments. One of the future avenues would be to make it adaptive. It would be interesting in the future to analyze $F$-DEA further and identify its strength and weakness. It would also be interesting to apply $F$-DEA to real-world problems. %and to extend $F$-DEA to solve constrained many-objective problems.
+
+\section*{References}
+
+\bibliography{fdeabibliography}
+
+\end{document}

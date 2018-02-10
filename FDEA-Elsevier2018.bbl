@@ -1,0 +1,195 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{deb2014evolutionary}
+K.~Deb, H.~Jain, An evolutionary many-objective optimization algorithm using
+  reference-point-based nondominated sorting approach, part i: solving problems
+  with box constraints, IEEE Transactions on Evolutionary Computation 18~(4)
+  (2014) 577--601.
+
+\bibitem{ishibuchi2010many}
+H.~Ishibuchi, Y.~Hitotsuyanagi, N.~Tsukamoto, Y.~Nojima, Many-objective test
+  problems to visually examine the behavior of multiobjective evolution in a
+  decision space, in: Parallel Problem Solving from Nature, PPSN XI, Springer,
+  2010, pp. 91--100.
+
+\bibitem{yang2013grid}
+S.~Yang, M.~Li, X.~Liu, J.~Zheng, A grid-based evolutionary algorithm for
+  many-objective optimization, IEEE Transactions on Evolutionary Computation
+  17~(5) (2013) 721--736.
+
+\bibitem{adraflemingdiversity}
+S.~F. Adra, P.~J. Fleming, Diversity management in evolutionary many-objective
+  optimization, IEEE Transactions on Evolutionary Computation 15~(2) (2011)
+  183--195.
+
+\bibitem{handingdiversity}
+H.~Wang, Y.~Jin, X.~Yao, Diversity assessment in many-objective optimization,
+  IEEE Transactions on Cybernetics PP~(99) (2016) 1--13.
+
+\bibitem{sdealgorithm}
+M.~Li, S.~Yang, X.~Liu, Shift-based density estimation for pareto-based
+  algorithms in many-objective optimization, IEEE Transactions on Evolutionary
+  Computation 18~(3) (2014) 348--365.
+
+\bibitem{kneaalgorithm}
+X.~Zhang, Y.~Tian, Y.~Jin, A knee point-driven evolutionary algorithm for
+  many-objective optimization, IEEE Transactions on Evolutionary Computation
+  19~(6) (2015) 761--776.
+
+\bibitem{coellotwoapproach}
+M.~Garza-Fabre, G.~Toscano-Pulido, C.~A.~C. Coello, Two novel approaches for
+  many-objective optimization, in: Proceedings of the IEEE Congress on
+  Evolutionary Computation (CEC), 2010, pp. 1--8.
+
+\bibitem{zhang2007moea}
+Q.~Zhang, H.~Li, Moea/d: A multiobjective evolutionary algorithm based on
+  decomposition, IEEE Transactions on Evolutionary Computation 11~(6) (2007)
+  712--731.
+
+\bibitem{li2009multiobjective}
+H.~Li, Q.~Zhang, Multiobjective optimization problems with complicated pareto
+  sets, moea/d and nsga-ii, IEEE Transactions on Evolutionary Computation
+  13~(2) (2009) 284--302.
+
+\bibitem{zhang2009performance}
+Q.~Zhang, W.~Liu, H.~Li, The performance of a new version of moea/d on cec09
+  unconstrained mop test instances., in: Proceedings of the IEEE Congress on
+  Evolutionary Computation (CEC), Vol.~1, 2009, pp. 203--208.
+
+\bibitem{moeadsas}
+X.~Cai, Z.~Yang, Z.~Fan, Q.~Zhang, Decomposition-based-sorting and
+  angle-based-selection for evolutionary multiobjective and many-objective
+  optimization, IEEE Transactions on Cybernetics PP~(99) (2016) 1--14.
+
+\bibitem{referencevectorguided}
+R.~Cheng, Y.~Jin, M.~Olhofer, B.~Sendhoff, A reference vector guided
+  evolutionary algorithm for many-objective optimization, IEEE Transactions on
+  Evolutionary Computation 20~(5) (2016) 773--791.
+
+\bibitem{piceag}
+R.~Wang, R.~C. Purshouse, P.~J. Fleming, Preference-inspired coevolutionary
+  algorithms for many-objective optimization, IEEE Transactions on Evolutionary
+  Computation 17~(4) (2013) 474--494.
+
+\bibitem{zitzler1999multiobjective}
+E.~Zitzler, L.~Thiele, Multiobjective evolutionary algorithms: a comparative
+  case study and the strength pareto approach, IEEE transactions on
+  Evolutionary Computation 3~(4) (1999) 257--271.
+
+\bibitem{bader2011hype}
+J.~Bader, E.~Zitzler, Hype: An algorithm for fast hypervolume-based
+  many-objective optimization, IEEE Transactions on Evolutionary Computation
+  19~(1) (2011) 45--76.
+
+\bibitem{xinyao6883177}
+H.~Wang, L.~Jiao, X.~Yao, An improved two-archive algorithm for many-objective
+  optimization, IEEE Transactions on Evolutionary Computation 19~(4) (2015)
+  524--541.
+
+\bibitem{he2014fuzzy}
+Z.~He, G.~G. Yen, J.~Zhang, Fuzzy-based pareto optimality for many-objective
+  evolutionary algorithms, IEEE Transactions on Evolutionary Computation 18~(2)
+  (2014) 269--285.
+
+\bibitem{he2012new}
+Z.~He, G.~G. Yen, A new fitness evaluation method based on fuzzy logic in
+  multiobjective evolutionary algorithms, in: Proceedings of the IEEE Congress
+  on Evolutionary Computation (CEC), 2012, pp. 1--8.
+
+\bibitem{koppen2005fuzzy}
+M.~K{\"o}ppen, R.~Vicente-Garcia, B.~Nickolay, Fuzzy-pareto-dominance and its
+  application in evolutionary multi-objective optimization, in: Evolutionary
+  Multi-Criterion Optimization, Springer, 2005, pp. 399--412.
+
+\bibitem{farina2004fuzzy}
+M.~Farina, P.~Amato, A fuzzy definition of" optimality" for many-criteria
+  optimization problems, IEEE Transactions on Systems, Man and Cybernetics,
+  Part A: Systems and Humans 34~(3) (2004) 315--326.
+
+\bibitem{fuzzynasir}
+M.~Nasir, A.~Mondal, S.~Sengupta, S.~Das, A.~Abraham, An improved
+  multiobjective evolutionary algorithm based on decomposition with fuzzy
+  dominance, in: Proceedings of the IEEE Congress on Evolutionary Computation
+  (CEC), 2011, pp. 765--772.
+
+\bibitem{thetadominance7080938}
+Y.~Yuan, H.~Xu, B.~Wang, X.~Yao, A new dominance relation-based evolutionary
+  algorithm for many-objective optimization, IEEE Transactions on Evolutionary
+  Computation 20~(1) (2016) 16--37.
+
+\bibitem{deb2006reference}
+K.~Deb, J.~Sundar, N.~Udaya Bhaskara~Rao, S.~Chaudhuri, Reference point based
+  multi-objective optimization using evolutionary algorithms, International
+  Journal of Computational Intelligence Research 2~(3) (2006) 273--286.
+
+\bibitem{epcs}
+P.~C. Roy, M.~M. Islam, K.~Murase, X.~Yao, Evolutionary path control strategy
+  for solving many-objective optimization problem, IEEE Transactions on
+  Cybernetics 45~(4) (2015) 702--715.
+
+\bibitem{mendel1995fuzzy}
+J.~M. Mendel, Fuzzy logic systems for engineering: a tutorial, Proceedings of
+  the IEEE 83~(3) (1995) 345--377.
+
+\bibitem{rectangleproblem}
+M.~Li, S.~Yang, X.~Liu, A test problem for visual investigation of
+  high-dimensional multi-objective search, in: Proceedings of the IEEE Congress
+  on Evolutionary Computation (CEC), 2014, pp. 2140--2147.
+
+\bibitem{purshouse2007evolutionary}
+R.~C. Purshouse, P.~J. Fleming, On the evolutionary optimization of many
+  conflicting objectives, IEEE Transactions on Evolutionary Computation 11~(6)
+  (2007) 770--784.
+
+\bibitem{das1998normal}
+I.~Das, J.~E. Dennis, Normal-boundary intersection: A new method for generating
+  the pareto surface in nonlinear multicriteria optimization problems, SIAM
+  Journal on Optimization 8~(3) (1998) 631--657.
+
+\bibitem{Knuth:1997:ACP:270146}
+D.~E. Knuth, The Art of Computer Programming, Volume 2 (3rd Ed.): Seminumerical
+  Algorithms, 1997.
+
+\bibitem{huband2006review}
+S.~Huband, P.~Hingston, L.~Barone, L.~While, A review of multiobjective test
+  problems and a scalable test problem toolkit, IEEE Transactions on
+  Evolutionary Computation 10~(5) (2006) 477--506.
+
+\bibitem{deb2005scalable}
+K.~Deb, L.~Thiele, M.~Laumanns, E.~Zitzler, Scalable Test Problems for
+  Evolutionary Multiobjective Optimization, 2005, pp. 105--145.
+
+\bibitem{wfgdegenrate}
+H.~Ishibuchi, H.~Masuda, Y.~Nojima, Pareto fronts of many-objective degenerate
+  test problems, IEEE Transactions on Evolutionary Computation 20~(5) (2016)
+  807--813.
+
+\bibitem{zitzler2003performance}
+E.~Zitzler, L.~Thiele, M.~Laumanns, C.~M. Fonseca, V.~G. Da~Fonseca,
+  Performance assessment of multiobjective optimizers: an analysis and review,
+  IEEE Transactions on Evolutionary Computation 7~(2) (2003) 117--132.
+
+\bibitem{wagner2007pareto}
+T.~Wagner, N.~Beume, B.~Naujoks, Pareto-, aggregation-, and indicator-based
+  methods in many-objective optimization, in: Evolutionary multi-criterion
+  optimization, Springer, 2007, pp. 742--756.
+
+\bibitem{deb2002fast}
+K.~Deb, A.~Pratap, S.~Agarwal, T.~Meyarivan, A fast and elitist multiobjective
+  genetic algorithm: Nsga-ii, IEEE Transactions on Evolutionary Computation
+  6~(2) (2002) 182--197.
+
+\bibitem{haynes2013wilcoxon}
+W.~Haynes, Wilcoxon rank sum test, in: Encyclopedia of Systems Biology,
+  Springer, 2013, pp. 2354--2355.
+
+\bibitem{abdi2007bonferonni}
+H.~Abdi, The bonferonni and {\v{s}}id{\'a}k corrections for multiple
+  comparisons, Encyclopedia of measurement and statistics 3 (2007) 103--107.
+
+\end{thebibliography}
